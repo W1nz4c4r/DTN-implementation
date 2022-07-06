@@ -11,8 +11,34 @@
 - *NASA ION course materials* go to the following [link](https://sourceforge.net/p/ion-dtn/wiki/NASA_ION_Course/)
 
 
+## Sofware versions
+**OS** - Parrot OS Home version
 
-## Getting ION (Interplanetary Overlay Network)  on linux
-***Version used:***  4.1.0
+**pyion** - 4.1.0
 
-download source [Here](https://sourceforge.net/projects/ion-dtn/files/)
+**ION** - 4.1.0
+
+## Getting ION (Interplanetary Overlay Network) & pyion on linux
+
+To download ION source original file please go  [Here](https://sourceforge.net/projects/ion-dtn/files/)
+
+
+### Steps for ION
+1. Download ION software
+2. move ***ion-open-source-4.1.0.tar.gz*** to a desired folder
+3. ```tar -xf ion-open-source-4.1.0.tar.gz```
+4. ```cd ion-open-source-4.1.0```
+5. ```./configure```
+6. ```make```
+7. ```sudo make install```
+
+
+*Note:* For a personalized installation or problems installing please  reefer to the *README.txt* in the "ion-open-source-4.1.0" folde
+
+
+### Steps for pyion
+for extra information please reefer to [pyion page](https://pyion.readthedocs.io/en/latest/)
+1. download the pyion version corresponding to the ION version
+     - ```git clone --branch v4.1.0 https://github.com/msancheznet/pyion.git```
+
+2. ```sudo -E python3 setup.py install```
