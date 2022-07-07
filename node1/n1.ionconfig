@@ -1,0 +1,7 @@
+wmKey		0
+sdrName		ion
+wmSize		5000000
+# 15 for configFlags will be: Bounded, Reversible, File+Memory
+configFlags	15
+heapWords	5000000
+pathName	/var/ion

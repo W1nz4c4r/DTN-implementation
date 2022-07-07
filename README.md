@@ -12,7 +12,7 @@
 
 
 ## Sofware versions
-**OS** - Parrot OS Home version
+**OS** - Parrot 5.18.0
 
 **pyion** - 4.1.0
 
