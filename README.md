@@ -28,17 +28,24 @@ To download ION source original file please go  [Here](https://sourceforge.net/p
 2. move ***ion-open-source-4.1.0.tar.gz*** to a desired folder
 3. ```tar -xf ion-open-source-4.1.0.tar.gz```
 4. ```cd ion-open-source-4.1.0```
-5. ```./configure```
-6. ```make```
-7. ```sudo make install```
+5. ```autoheader```
+6. ```aclocal```
+7. ```autoconf```
+8. ```automake```
+9. ```./configure CFLAGS='-O0 -ggdb3' CPPFLAGS='-O0 -ggdb3' CXXFLAGS='-O0 -ggdb3'```
+10. ```make```
+11. ```sudo make install```
+12. ```sudo ldconfig```
 
 
-*Note:* For a personalized installation or problems installing please  reefer to the *README.txt* in the "ion-open-source-4.1.0" folde
+*Note:* For a personalized installation or problems installing please  reefer to the *README.txt* in the "ion-open-source-4.1.0" folder
 
 
 ### Steps for pyion
 for extra information please reefer to [pyion page](https://pyion.readthedocs.io/en/latest/)
-1. download the pyion version corresponding to the ION version
+1. ```sudo apt-get install autotools-dev automake python3-dev```
+2. Create ION_HOME enviroment export ION_HOME=/"your-ion-folder-path"
+3. Download the pyion version corresponding to the ION version
      - ```git clone --branch v4.1.0 https://github.com/msancheznet/pyion.git```
 
 2. ```sudo -E python3 setup.py install```
