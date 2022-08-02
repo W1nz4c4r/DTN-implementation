@@ -1,0 +1,78 @@
+#
+# ionrc
+#
+1 12 ''
+s
+a contact +1 +3600 12 12 100000
+a contact +1 +3600 12 17 100000
+a contact +1 +3600 17 12 100000
+a contact +1 +3600 17 17 100000
+# [!] Relative start time : 1  (sec)
+# [!] Relative stop time : 3600 (sec)
+# [!] Source node : 12
+# [!] Destination node : 12
+# [!] trasmision distance : 1 (light sec)
+a range +1 +3600 12 12 1
+a range +1 +3600 12 17 1
+a range +1 +3600 17 12 1
+a range +1 +3600 17 17 1
+m production 100000000
+m consumption 100000000
+#
+# END ionrc
+#
+# begin ltpadmin
+1 32
+a span 12 32 32 1400 10000 1 'udplso 192.168.0.51:1234' 300
+a span 17 32 32 1400 10000 1 'udplso 192.168.0.50:1234' 300
+s 'udplsi 192.168.0.51:1234'
+# end ltpadmin
+#
+# bprc
+#
+# Initialize
+1
+a scheme ipn 'ipnfw' 'ipnadminep'
+# [!] Node Number : 12
+# [!] Node Service Number : 1 [BP ECHO]
+# [!] Bundle Disposition : x (Discard)
+a endpoint ipn:12.1 x
+# [!] Node Number : 12
+# [!] Node Service Number : 3 [BP SENDER]
+# [!] Bundle Disposition : x (Discard)
+a endpoint ipn:12.3 x
+# [!] Node Number : 12
+# [!] Node Service Number : 22 [DTN Test service1]
+# [!] Bundle Disposition : q (Queue)
+a endpoint ipn:12.22 q
+# [!] Node Number : 12
+# [!] Node Service Number : 54 [DTN Test Service 2]
+# [!] Bundle Disposition : x (Discard)
+a endpoint ipn:12.54 x
+# PROTOCOL
+# [=] Protocol name : ltp
+# [=] payload bytes per frame : 1400
+# [=] overhead bytes per frame : 100
+a protocol ltp 1400 100
+# INDUCTS
+# [+] ltp duct name : 12
+# [+] ltp cli task name : ltpcli
+a induct ltp 12 ltpcli
+# OUTDUCTS
+# [-] ltp Duct name: 12
+# [-] ltp clo task name : ltpclo
+# [-] ltp max lenght payload: 3000 (Bytes)
+a outduct ltp 12 ltpclo 3000
+a outduct ltp 17 ltpclo 3000
+s
+#
+# END bprc
+#
+#
+# .ipnrc
+#
+a plan 12 ltp/12
+a plan 17 ltp/17
+#
+# END ipnrc
+#

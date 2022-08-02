@@ -26,10 +26,10 @@ s 'udplsi 192.168.0.51:1234'
 ## begin bpadmin
 1
 a scheme ipn 'ipnfw' 'ipnadminep'
-a endpoint ipn:12.0 x
 a endpoint ipn:12.1 x
-a endpoint ipn:12.2 x
-a endpoint ipn:12.15 q
+a endpoint ipn:12.3 x
+a endpoint ipn:12.19 x
+a endpoint ipn:12.45 q
 a protocol ltp 1400 100
 a induct ltp 12 ltpcli
 a outduct ltp 12 ltpclo

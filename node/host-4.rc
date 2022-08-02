@@ -1,0 +1,36 @@
+## begin ionadmin
+1 4 ''
+s
+
+a contact +0 +1000 4 11 1000000
+a contact +0 +1000 11 4 1000000
+
+
+a range +0 +1000 4 11 1
+a range +0 +1000 11 4 1
+## end ionadmin
+
+## begin ltpadmin
+1 32
+a span 4 32 32 1400 10000 1 'udplso 192.168.0.51:1234' 300
+a span 11 32 32 1400 10000 1 'udplso 192.168.0.50:1234' 300
+s 'udplsi 192.168.0.51:1234'
+## end ltpadmin
+
+## begin bpadmin
+1
+a scheme ipn 'ipnfw' 'ipnadminep'
+a endpoint ipn:4.1 x
+a endpoint ipn:4.3 x
+a endpoint ipn:4.12 x
+a endpoint ipn:4.25 q
+a protocol ltp 1400 100 1000000
+a induct ltp 4 ltpcli
+a outduct ltp 11 ltpclo 1500
+s
+## end bpadmin
+
+## begin ipnadmin
+a plan 11 ltp/11
+
+## end ipnadmin

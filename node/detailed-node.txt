@@ -1,0 +1,106 @@
+# BEGIN ION
+# INITIALIZE
+# [1] ion node number : 4
+# [2] ionconfig file name :
+1 4
+
+#
+# START
+s
+# CONTACTS
+# [1] relative start time : 0 (secs)
+# [2] relative stop time : 1000 (secs)
+# [3] source node : 4
+# [4] destination node : 11
+# [5] transmission data rate : 1000000 (bytes per sec)
+# [6] contact confidence : (fraction)
+a contact +0 +1000 4 11 1000000
+
+# RANGE_REL_REL_TIME
+# [1] relative start time : 0 (secs)
+# [2] relative stop time : 1000 (secs)
+# [3] one node : 4
+# [4] other node : 11
+# [5] transmission distance : 1 (light secs)
+a range +0 +1000 4 11 1
+# RANGE_REL_REL_TIME
+# [1] relative start time : 0 (secs)
+# [2] relative stop time : 1000 (secs)
+# [3] one node : 11
+# [4] other node : 4
+# [5] transmission distance : 1 (light secs)
+a range +0 +1000 11 4 1
+# END ION
+#
+# BEGIN LTPADMIN
+1 32
+a span 12 32 32 1400 10000 1 'udplso 192.168.0.51:1234' 300
+a span 17 32 32 1400 10000 1 'udplso 192.168.0.50:1234' 300
+s 'udplsi 192.168.0.51:1234'
+# END LTPADMIN
+#
+# BEGIN BPRC
+# INITIALIZE
+1
+#
+# SCHEME
+# [1] scheme name : ipn [Interplanetary Overlay Network Scheme]
+# [2] forwarder command : ipnfw [ION Forwarder]
+# [3] admin app command : ipnadminep [ION Admin Endpoints]
+a scheme ipn 'ipnfw' 'ipnadminep'
+#
+# ENDPOINT
+# [1] node num : 4
+# [2] service num : 1 [BP Echo]
+# [3] bundle disposition : x [Discard]
+# [4] queue receiver task :
+a endpoint ipn:4.1 x
+#
+# ENDPOINT
+# [1] node num : 4
+# [2] service num : 3
+# [3] bundle disposition : x [discard]
+# [4] queue receiver task :
+a endpoint ipn:4.3 x
+#
+# ENDPOINT
+# [1] node num : 4
+# [2] service num : 12
+# [3] bundle disposition : x [Discard]
+# [4] queue receiver task :
+a endpoint ipn:4.12 x
+#
+# ENDPOINT
+# [1] node num : 4
+# [2] service num :25
+# [3] bundle disposition : q [queue]
+# [4] queue receiver task :
+a endpoint ipn:4.25 q
+#
+# PROTOCOL
+# [1] protocol name : ltp [Licklider Transmission Protocol]
+# [2] payload bytes per frame : 1400 (bytes)
+# [3] overhead bytes per frame : 100 (bytes)
+# [4] nominal data rate : 1000000 (bytes per sec)
+a protocol ltp 1400 100 1000000
+#
+# INDUCT_LTP
+# [1] ltp duct name : 4
+# [2] ltp cli task name : ltpcli
+a induct ltp 4 ltpcli
+#
+# OUTDUCT_LTP
+# [1] ltp duct name : 11
+# [2] ltp clo task name : ltpclo
+# [3] max payload length : 1500 (bytes)
+a outduct ltp 11 ltpclo 1500
+
+# START
+s
+# END BPRC
+# BEGIN IPNRC
+# PLAN_LTP
+# [1] to node number : 11
+# [2] default ltp outduct name : 11
+a plan 11 ltp/11
+# END IPNRC
