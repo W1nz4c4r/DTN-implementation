@@ -4,10 +4,14 @@ s
 
 a contact +0 +1000 4 11 1000000
 a contact +0 +1000 11 4 1000000
+a contact +0 +1000 11 11 100000
+a contact +0 +1000 4 4 100000
 
 
 a range +0 +1000 4 11 1
 a range +0 +1000 11 4 1
+a range +0 +1000 11 11 1
+a range +0 +1000 4 4 1
 ## end ionadmin
 
 ## begin ltpadmin
