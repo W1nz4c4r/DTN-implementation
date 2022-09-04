@@ -54,7 +54,6 @@ def main():
     ION_NUM = 0 #host.rc number
     host_Name = ''
 
-    subprocess.run('clear')
     while PRG_END:
         user_value = input('\nDTN-ION>> ')
         #instructions will be splited and done separatelly
@@ -203,8 +202,11 @@ def set_Trasmiter(number):
             node = 'ipn:{}.{}'.format(number, service)
             #checking if service is up
             UP_service = pyion.admin.bp_endpoint_exists(node)
+
+            # if true the service is UP
             if UP_service:
                 print('[+] Service is up and running!!!')
+                #Select the RECEIVER node you wish to connect to
                 #bool is made to verify user input, will turn false if input is number
                 dst_node_bool = True
                 #while input not a number TRUE
@@ -219,12 +221,13 @@ def set_Trasmiter(number):
                     else :
                         print("[-] Please enter a the NUMBER of the Node you wish to activate")
 
+                #Select the service you wish to connect to
                 #bool is made to verify user input, will turn false if input is number
                 dst_service_bool = True
                 #while input not a number TRUE
                 while dst_service_bool:
-                    dst_service = input("[!] Please enter the Service number... \n\tSERVICE #: ")
-                    checker = Check_Input(dst_service_bool)
+                    dst_service = input("\n[!] Please enter the Service number... \n\tSERVICE #: ")
+                    checker = Check_Input(dst_service)
                         #   True for number
                         #   False for string
                     if checker :
@@ -232,36 +235,96 @@ def set_Trasmiter(number):
                         break
                     else :
                         print("[-] Please enter a the SERVICE of the Node you wish to activate")
-                allow = input(("\n[+] You wish to contact ipn:{}.{}? (Y or N)".format(dst_node, dst_service)))
 
-
-                #trasmiting data from specified service
-                with proxy.bp_open(node) as eid:
-                    for i in range(10):
+                receiver_node = "ipn:{}.{}".format(dst_node, dst_service)
+                allow = input(("\n[+] You wish to contact {}? (Y or N)".format(receiver_node)))
+                if (allow == "Y" or allow =="y"):
+                    #user confirmed connection
+                    #trasmiting data from specified service
+                    with proxy.bp_open(node) as eid:
                         print('\n[!] Seding data ... ')
-                        #CHANGE THIS FOR SOMETHING DINAMYC NOT STATIC
-                        eid.bp_send('ipn:11.33', b'hello')
+                        #open file containing data
+                        f = open("file.txt", "r")
+                        for line in f:
+                            if line.strip() == "": #if the line is empty dont send it.
+                                continue
+                            else:
+                                eid.bp_send("ipn:11.17", b'hola1')
+                            eid.bp_send("ipn:11.17", "hola2")
+                        eid.bp_send("ipn:11.17", "hola3")
+                elif(allow == "N" or allow == "n"):
+                    #user Denied connection
+                    return
 
+
+
+
+
+            #False = the selected service is down/Not active
+            #it will give the option to activate the selected service if desired
             else:
                 activate_EP = input('[-] WARNING: service {} its not ACTIVE on node #{}. \nDo you wish to activate it? (Y (yes) 0r N (no))'.format(service, number))
                 if (activate_EP == 'Y' or activate_EP == 'y'):
                     print('[+] Activating specified service')
-                    Activate_trasmiter_service()
-                else:
+                    #this function is the encharge of creating the temporaty service on the Node
+                    Activate_trasmiter_service(node)
+                elif (activate_EP == 'N' or activate_EP == 'n'):
+                    #If no send user again to main function
                     set_Trasmiter(number)
+                elif (activate_EP == '-Q' or activate_EP == '-q'):
+                    print("[!] Exiting the app ...")
+                    sys.exit(1)
+                else:
+                    #show usage
+                    usage()
+                    time.sleep(5)
+                    main()
 
         else:
             if( service == '-EPS' or service == '-eps'):
                 print ("\n\t ===== Check Enpoint Status =====")
                 check_enpoints(number)
                 set_Trasmiter(number)
+            elif( service == '-Q' or service == '-q'):
+                print("[!] Exiting the app ...")
+                sys.exit(1)
             else:
-                print ('[*]Please enter a valid service NUMBER \n[*] to check service numbers active use : -EPS')
+                print ('[*]Please enter a valid service NUMBER \n[*] to check service numbers active use : -EPS \n[*] To exit the app please enter : -Q')
                 set_Trasmiter(number)
 
 
-def Activate_trasmiter_service():
-    print('[!] On trasmiter creating service')
+#helper  function envharge of activating the user desired service
+#param:
+#   - node = ipn:#.#
+def Activate_trasmiter_service(node):
+
+    discard = input("[+] Please select the mode you wish to set up the service. \n[!] Use D to discard and Q to queue \n[!] To go back enter -BK [*] Mode: ")
+    discard_value = Check_Input(discard)
+    #   True for number
+    #   False for string
+    if discard_value:
+        #if user enter a number take him back to enter input
+        Activate_trasmiter_service(node)
+    else:
+        #user entered a letter
+        if (discard == 'D' or discard == 'd'): #discard Mode
+            print ("[!] Node set on Discard mode!")
+            pyion.admin.bp_add_endpoint(node, True) #add the new temporary EndPoint
+            return
+        elif (discard == 'Q' or discard == 'q'): #Queue Mode
+            print ("[!] Node set on Queie mode!")
+            pyion.admin.bp_add_endpoint(node, False) #add a temporary EndPoint
+            return
+        elif (dicard == "-BK" or discard == '-bk'):
+            print("<--")
+            return
+        elif( discard == '-Q' or discard == '-q'): #quit the app
+            print("[!] Exiting the app ...")
+            sys.exit(1)
+
+#this is a recursive function that will help the user to specify which receiver node does the user wish to connect # TODO:
+def set_Trans_Receiver_node():
+    print("show which receiver node")
 
 # will set the node as a receiver and will receive info form the specified node
 def set_Receiver(number):
@@ -299,4 +362,5 @@ if __name__ == '__main__' :
         usage()
     elif( (len(sys.argv)) < 2 ):
         # if lenght correct send flow to main
+        subprocess.run('clear')
         main()
