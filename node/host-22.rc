@@ -1,0 +1,43 @@
+## begin ionadmin 
+1 22 ''
+s
+
+a contact +1 +3600 22 22 100000
+a contact +1 +3600 22 24 100000
+a contact +1 +3600 24 22 100000
+a contact +1 +3600 24 24 100000
+
+a range +1 +3600 22 22 1
+a range +1 +3600 22 24 1
+a range +1 +3600 24 22 1
+a range +1 +3600 24 24 1
+
+m production 100000000
+m consumption 100000000
+## end ionadmin 
+
+## begin ltpadmin 
+1 32
+a span 22 32 32 1400 10000 1 'udplso 192.168.0.36:4653' 300
+a span 24 32 32 1400 10000 1 'udplso 192.168.0.37:4653' 300
+s 'udplsi 192.168.0.36:4653'
+## end ltpadmin 
+
+## begin bpadmin 
+1
+a scheme ipn 'ipnfw' 'ipnadminep'
+a endpoint ipn:22.0 q
+a endpoint ipn:22.1 q
+a endpoint ipn:22.2 q
+a protocol ltp 1400 100
+a induct ltp 22 ltpcli
+a outduct ltp 22 ltpclo
+a outduct ltp 24 ltpclo
+s
+## end bpadmin 
+
+## begin ipnadmin 
+a plan 22 ltp/22
+a plan 24 ltp/24
+
+## end ipnadmin
