@@ -18,9 +18,9 @@ m consumption 100000000
 
 ## begin ltpadmin 
 1 32
-a span 22 32 32 1400 10000 1 'udplso 192.168.18.100:4653' 300
-a span 24 32 32 1400 10000 1 'udplso 192.168.18.138:4653' 300
-s 'udplsi 192.168.18.138:4653'
+a span 22 32 32 1400 10000 1 'udplso 192.168.0.36:4653' 300
+a span 24 32 32 1400 10000 1 'udplso 192.168.0.37:4653' 300
+s 'udplsi 192.168.0.37:4653'
 ## end ltpadmin 
 
 ## begin bpadmin 

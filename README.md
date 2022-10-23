@@ -64,7 +64,7 @@ rlwrap is a 'readline wrapper', a small utility that uses the GNU Readline libra
 **how to install:**
 ``` sudo apt install rlwrap```
 
-## ==Before usage== :
+## Before usage :
   - **Change Host files information**
 You will need to change the information of the host files or use the temprate file so with your network information to 
 guarrantee that the nodes has the correct connection.

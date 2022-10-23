@@ -212,7 +212,7 @@ def set_Trasmiter(number):
                     continue
                 else:
                     payload = line + "       " +str(datetime.datetime.now(pytz.timezone('US/Eastern')))
-                    eid.bp_send('ipn:22.14', payload)
+                    eid.bp_send('ipn:22.1', payload)
 
     else:
         print ("This is a String !!!")
