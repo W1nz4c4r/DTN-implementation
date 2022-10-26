@@ -184,8 +184,6 @@ def create_EP_list(rng, number):
     return list
 
 
-
-
 # will set the node as trasmiter, will send information a specified node
 def set_Trasmiter(number):
     service = ''
@@ -203,20 +201,91 @@ def set_Trasmiter(number):
     #   False for string
     ipn = "ipn:{}.{}".format(number,service)
 
-    if path :
-        # Open endpoint 'ipn:1.1' and send data to 'ipn:2.1'
-        f = open("file.txt", "r")
-        with proxy.bp_open(ipn) as eid:
-            for line in f:
-                if line.strip() == "": #if the line is empty dont send it.
-                    continue
-                else:
-                    payload = line + "       " +str(datetime.datetime.now(pytz.timezone('US/Eastern')))
-                    eid.bp_send('ipn:22.1', payload)
+    
 
+    if path :
+        #checking if specified node and service is active 
+        #t_node_up --> true if the local node is up 
+        t_node_up = pyion.admin.bp_endpoint_exists(ipn)
+        if t_node_up:
+            print("[*] Service is up and running!!!")
+            #Getting the destination node and service 
+            dest_node = input("\n[!] Please enter the NODE number you wish to contact: \n\tNODE #: ")
+            #dst_node_check is will tell us if the input given by the user is a number o a string
+            dst_node_check = Check_Input(dest_node)
+            #   True for number
+            #   False for string
+            if dst_node_check:
+                #the user have enter a number as a node 
+                print("[*] Node number setted up")
+                dest_service = input("\n[!] Please enter the SERVICE you wish to contact: \n\t SERVICE #: ")
+                dst_service_check = Check_Input(dest_service)
+                #   True for number
+                #   False for string
+                if dst_service_check:
+                    #user enter a number as service
+                    print("[*] Service number has been setted up")
+                    #finnish confirming the information for setting up the node information to transtmit 
+                    ipn_connection = "ipn:{}.{}" .format(dest_node, dest_service) # this is the node that is going to receive the information 
+                    print(ipn_connection)
+                    conf_conn = input('[!] Do you wish to set up {} to as a trasmiter ? (Y/N) '.format(ipn))
+                    if (conf_conn == 'Y' or conf_conn =='y'):
+
+                        #starting seding the information
+                        #openning file containng all sensor information 
+                        f = open("file.txt", "r")
+                        with proxy.bp_open(ipn) as eid:
+                            for line in f:
+                                if line.strip() == "": #if the line is empty dont send it.
+                                    continue
+                                else:
+                                    payload = line + "       " +str(datetime.datetime.now(pytz.timezone('US/Eastern')))
+                                    eid.bp_send(ipn_connection, payload)
+                    elif (conf_conn == 'N' or conf_conn =='n'):
+                        set_Trasmiter(number)
+
+                else:
+                    print("You entered an incorrect service \nPlase repeat the process and check your input")
+                    print('\n\t===== Setting node as Receiver =====')
+                    set_Trasmiter(number)
+
+            else:
+                print ("You entered an invalid node caracter - string \nPlease repeat the process and check your input")
+                print('\n\t===== Setting node as Receiver =====')
+                set_Trasmiter(number)
+        else:
+            print("[!] The service is not up!")
+            create_receiver =input("[+] do you wish to activate {}".format(ipn))
+            #yes will create/activate the new service and that specified node
+            #no will go bacl th set_trasmiter
+            if (create_receiver == 'y' or create_receiver =='Y'):
+                print('[*] Activating the Specified Service.')
+                #calling the function that will activate the specified service
+                Activate_trasmiter_service(ipn)
+            elif (create_receiver == 'N' or create_receiver == 'n'):
+                #If no send user again to main function
+                set_Trasmiter(number)
+            elif (create_receiver == '-Q' or create_receiver == '-q'):
+                print("[!] Exiting the app ...")
+                sys.exit(1)
+            else:
+                #show usage
+                usage()
+                time.sleep(5)
+                main()
+    #user entered a wrong option 
     else:
-        print ("This is a String !!!")
-        
+        if( t_node_up == '-EPS' or t_node_up == '-eps'):
+            print ("\n\t ===== Check Enpoint Status =====")
+            check_enpoints(number)
+            set_trasmiter(number)
+        elif( t_node_up == '-Q' or t_node_up == '-q'):
+            print("[!] Exiting the app ...")
+            sys.exit(1)
+        else:
+            print ('[*]Please enter a valid service NUMBER \n[*] to check service numbers active use : -EPS \n[*] To exit the app please enter : -Q')
+            set_Receiver(number)
+
         
         
 
@@ -293,17 +362,42 @@ def set_Receiver(number):
                             # User has triggered interruption with Ctrl+C
                             break
             elif( conf_conn == 'N' or conf_conn =='n'):
-                            print("BACK TO TOP")
-                            #set_Receiver(number)
+                set_Receiver(number)
 
 
         else:
-            print("[!]Service is not up")
-            
+            print("[!] The service is not up!")
+            create_receiver = input('[+] do you wish to activate {}? (Y/N)'.format(ipn))
+            #yes will create/activate a new service
+            #no will go back to set_Receiver
+            if (create_receiver == 'y' or create_receiver =='Y'):
+                print('[*] Activating the Specified Service.')
+                #calling the function that will activate the specified service
+                activate_Receiver_service(ipn)
+            elif (create_receiver == 'N' or create_receiver == 'n'):
+                #If no send user again to main function
+                set_Trasmiter(number)
+            elif (create_receiver == '-Q' or create_receiver == '-q'):
+                print("[!] Exiting the app ...")
+                sys.exit(1)
+            else:
+                #show usage
+                usage()
+                time.sleep(5)
+                main()
 
-       
+    #user entered a wrong option
     else:
-        print("this is a string")
+        if( recv_number == '-EPS' or recv_number == '-eps'):
+                print ("\n\t ===== Check Enpoint Status =====")
+                check_enpoints(number)
+                set_Receiver(number)
+        elif( recv_number == '-Q' or recv_number == '-q'):
+            print("[!] Exiting the app ...")
+            sys.exit(1)
+        else:
+            print ('[*]Please enter a valid service NUMBER \n[*] to check service numbers active use : -EPS \n[*] To exit the app please enter : -Q')
+            set_Receiver(number)
 
 
 
