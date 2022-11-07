@@ -3,14 +3,21 @@
 s
 
 a contact +1 +3600 22 22 100000
+a contact +1 +3600 24 24 100000
+a contact +1 +3600 5 5 100000
 a contact +1 +3600 22 24 100000
 a contact +1 +3600 24 22 100000
-a contact +1 +3600 24 24 100000
+a contact +1 +3600 5 22 100000
+a contact +1 +3600 22 5 100000
+
 
 a range +1 +3600 22 22 1
+a range +1 +3600 24 24 1
+a range +1 +3600 5 5 1
+a range +1 +3600 5 22 1
+a range +1 +3600 22 5 1
 a range +1 +3600 22 24 1
 a range +1 +3600 24 22 1
-a range +1 +3600 24 24 1
 
 m production 100000000
 m consumption 100000000

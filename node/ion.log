@@ -2645,3 +2645,687 @@
 [2022/10/26-14:40:35] [i] bpclm is running: ipn:24.0
 [2022/10/26-14:41:55] [?] Can't find ION security database.
 [2022/10/26-14:42:15] [i] Span to engine 22 (max BER 0.000100, max xmit segment size 1400, max recv segment size 1392): xmit segment loss rate 0.673799, recv segment loss rate 0.671704, max timeouts 35.
+[2022/10/27-12:19:44] [i] rfxclock is running.
+[2022/10/27-12:19:44] [i] No congestion collapse predicted.
+[2022/10/27-12:19:44] [i] ionwarn finished.
+[2022/10/27-12:19:45] [i] Span to engine 22 (max BER 0.000100, max xmit segment size 1400, max recv segment size 1): xmit segment loss rate 0.673799, recv segment loss rate 0.000800, max timeouts 35.
+[2022/10/27-12:19:45] [i] Span to engine 24 (max BER 0.000100, max xmit segment size 1400, max recv segment size 1): xmit segment loss rate 0.673799, recv segment loss rate 0.000800, max timeouts 35.
+[2022/10/27-12:19:45] [?] Total max export sessions exceeds estimate.  Session lookup speed may be degraded: -32
+[2022/10/27-12:19:45] [i] ltpclock is running.
+[2022/10/27-12:19:45] [i] ltpdeliv is running.
+[2022/10/27-12:19:45] [i] ltpmeter is running.
+[2022/10/27-12:19:45] [i] ltpmeter is running.
+[2022/10/27-12:19:45] [i] udplso is running, spec=[192.168.0.36:0], rengine=22.
+[2022/10/27-12:19:45] [i] udplsi is running, spec=[192.168.0.37:4653].
+[2022/10/27-12:19:45] [i] udplso is running, spec=[192.168.0.37:0], rengine=24.
+[2022/10/27-12:19:46] [i] No congestion collapse predicted.
+[2022/10/27-12:19:46] [i] ionwarn finished.
+[2022/10/27-12:19:46] [i] This node deploys bundle protocol version 7.
+[2022/10/27-12:19:46] [?] Can't find ION security database.
+[2022/10/27-12:19:46] [?] Warning: running without bundle security.
+[2022/10/27-12:19:46] [?] Can't find ION security database.
+[2022/10/27-12:19:46] [i] bpclock is running.
+[2022/10/27-12:19:46] [?] Can't find ION security database.
+[2022/10/27-12:19:46] [i] Not configured for multicast; cpsd stopping.
+[2022/10/27-12:19:46] [?] Can't find ION security database.
+[2022/10/27-12:19:46] [?] Can't find ION security database.
+[2022/10/27-12:19:46] [i] ltpclo is running.
+[2022/10/27-12:19:46] [i] ltpclo is running.
+[2022/10/27-12:19:46] [?] Can't find ION security database.
+[2022/10/27-12:19:46] [?] Can't find ION security database.
+[2022/10/27-12:19:46] [i] bptransit is running.
+[2022/10/27-12:19:46] [?] Can't find ION security database.
+[2022/10/27-12:19:46] [i] ltpcli is running.
+[2022/10/27-12:19:46] [i] ipnadminep is running.
+[2022/10/27-12:19:46] [?] Can't find ION security database.
+[2022/10/27-12:19:46] [i] ipnfw is running.
+[2022/10/27-12:19:47] [x] src from 1969/12/31-19:00:00 to 2022/10/27-12:19:47: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/10/27-12:19:47] [x] fwd from 1969/12/31-19:00:00 to 2022/10/27-12:19:47: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/10/27-12:19:47] [x] xmt from 1969/12/31-19:00:00 to 2022/10/27-12:19:47: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/10/27-12:19:47] [x] rcv from 1969/12/31-19:00:00 to 2022/10/27-12:19:47: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/10/27-12:19:47] [x] dlv from 1969/12/31-19:00:00 to 2022/10/27-12:19:47: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/10/27-12:19:47] [x] rfw from 1969/12/31-19:00:00 to 2022/10/27-12:19:47: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/10/27-12:19:47] [x] exp from 1969/12/31-19:00:00 to 2022/10/27-12:19:47: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/10/27-12:19:47] [?] Can't find ION security database.
+[2022/10/27-12:19:47] [?] Can't find ION security database.
+[2022/10/27-12:19:47] [i] bpclm is running: ipn:24.0
+[2022/10/27-12:19:47] [?] Can't find ION security database.
+[2022/10/27-12:19:47] [i] bpclm is running: ipn:22.0
+[2022/10/27-12:20:22] [?] Can't find ION security database.
+[2022/10/27-12:21:00] [?] Can't find ION security database.
+[2022/10/27-12:21:33] [?] Can't find ION security database.
+[2022/10/27-12:22:02] [?] Can't find ION security database.
+[2022/10/27-12:22:37] [i] Span to engine 22 (max BER 0.000100, max xmit segment size 1400, max recv segment size 105): xmit segment loss rate 0.673799, recv segment loss rate 0.080585, max timeouts 35.
+[2022/10/27-12:27:32] at line 810 of cfdp/library/libcfdpP.c, Can't find CFDP database.
+[2022/10/27-12:27:33] [?] Can't find ION security database.
+[2022/10/27-12:27:33] [i] Plan has been stopped: ipn:22.0
+[2022/10/27-12:27:33] [i] Plan has been stopped: ipn:24.0
+[2022/10/27-12:27:33] [i] bpclm has ended: ipn:24.0
+[2022/10/27-12:27:33] [i] bpclm has ended: ipn:22.0
+[2022/10/27-12:27:33] [i] ipnfw forwarder has ended.
+[2022/10/27-12:27:33] [i] Endpoint has been stopped.
+[2022/10/27-12:27:33] [i] Administrative endpoint terminated.
+[2022/10/27-12:27:33] [i] ipnadminep has ended.
+[2022/10/27-12:27:33] [i] bpclock has ended.
+[2022/10/27-12:27:33] [i] Outduct has been stopped: 22
+[2022/10/27-12:27:33] [i] ltpclo outduct closed.
+[2022/10/27-12:27:33] [i] ltpclo duct has ended.
+[2022/10/27-12:27:33] [i] Outduct has been stopped: 24
+[2022/10/27-12:27:33] [i] ltpclo outduct closed.
+[2022/10/27-12:27:33] [i] ltpclo duct has ended.
+[2022/10/27-12:27:33] [i] ltpcli receiver thread has ended.
+[2022/10/27-12:27:33] [i] ltpcli duct has ended.
+[2022/10/27-12:27:33] [i] bptransit has ended.
+[2022/10/27-12:27:34] [i] LTP meter to engine 22 is stopped.
+[2022/10/27-12:27:34] [i] LSO to engine 22 is stopped.
+[2022/10/27-12:27:34] [i] ltpmeter has ended.
+[2022/10/27-12:27:34] [i] LSO to engine 24 is stopped.
+[2022/10/27-12:27:34] [i] udplsa receiver thread has ended.
+[2022/10/27-12:27:34] [i] LTP meter to engine 24 is stopped.
+[2022/10/27-12:27:34] [i] ltpmeter has ended.
+[2022/10/27-12:27:34] [i] udplsa receiver thread has ended.
+[2022/10/27-12:27:34] [i] udplso has ended.
+[2022/10/27-12:27:34] [i] udplso has ended.
+[2022/10/27-12:27:34] [i] udplsa receiver thread has ended.
+[2022/10/27-12:27:34] [i] ltpclock has ended.
+[2022/10/27-12:27:34] [i] udplsi has ended.
+[2022/10/27-12:27:34] [i] ltpdeliv has ended.
+[2022/10/27-12:27:35] [i] rfxclock has ended.
+[2022/10/27-12:27:44] [i] rfxclock is running.
+[2022/10/27-12:27:44] [i] No congestion collapse predicted.
+[2022/10/27-12:27:44] [i] ionwarn finished.
+[2022/10/27-12:27:45] [i] Span to engine 22 (max BER 0.000100, max xmit segment size 1400, max recv segment size 1): xmit segment loss rate 0.673799, recv segment loss rate 0.000800, max timeouts 35.
+[2022/10/27-12:27:45] [i] Span to engine 24 (max BER 0.000100, max xmit segment size 1400, max recv segment size 1): xmit segment loss rate 0.673799, recv segment loss rate 0.000800, max timeouts 35.
+[2022/10/27-12:27:45] [?] Total max export sessions exceeds estimate.  Session lookup speed may be degraded: -32
+[2022/10/27-12:27:45] [i] ltpclock is running.
+[2022/10/27-12:27:45] [i] ltpdeliv is running.
+[2022/10/27-12:27:45] [i] udplso is running, spec=[192.168.0.36:0], rengine=22.
+[2022/10/27-12:27:45] [i] udplso is running, spec=[192.168.0.37:0], rengine=24.
+[2022/10/27-12:27:45] [i] udplsi is running, spec=[192.168.0.37:4653].
+[2022/10/27-12:27:45] [i] ltpmeter is running.
+[2022/10/27-12:27:45] [i] ltpmeter is running.
+[2022/10/27-12:27:46] [i] No congestion collapse predicted.
+[2022/10/27-12:27:46] [i] ionwarn finished.
+[2022/10/27-12:27:46] [i] This node deploys bundle protocol version 7.
+[2022/10/27-12:27:46] [?] Can't find ION security database.
+[2022/10/27-12:27:46] [?] Warning: running without bundle security.
+[2022/10/27-12:27:46] [?] Can't find ION security database.
+[2022/10/27-12:27:46] [i] bpclock is running.
+[2022/10/27-12:27:46] [?] Can't find ION security database.
+[2022/10/27-12:27:46] [i] Not configured for multicast; cpsd stopping.
+[2022/10/27-12:27:46] [?] Can't find ION security database.
+[2022/10/27-12:27:46] [i] ltpclo is running.
+[2022/10/27-12:27:46] [?] Can't find ION security database.
+[2022/10/27-12:27:46] [?] Can't find ION security database.
+[2022/10/27-12:27:46] [i] bptransit is running.
+[2022/10/27-12:27:46] [?] Can't find ION security database.
+[2022/10/27-12:27:46] [i] ipnfw is running.
+[2022/10/27-12:27:46] [i] ltpcli is running.
+[2022/10/27-12:27:46] [?] Can't find ION security database.
+[2022/10/27-12:27:46] [i] ltpclo is running.
+[2022/10/27-12:27:46] [?] Can't find ION security database.
+[2022/10/27-12:27:46] [i] ipnadminep is running.
+[2022/10/27-12:27:47] [x] src from 1969/12/31-19:00:00 to 2022/10/27-12:27:47: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/10/27-12:27:47] [x] fwd from 1969/12/31-19:00:00 to 2022/10/27-12:27:47: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/10/27-12:27:47] [x] xmt from 1969/12/31-19:00:00 to 2022/10/27-12:27:47: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/10/27-12:27:47] [x] rcv from 1969/12/31-19:00:00 to 2022/10/27-12:27:47: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/10/27-12:27:47] [x] dlv from 1969/12/31-19:00:00 to 2022/10/27-12:27:47: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/10/27-12:27:47] [x] rfw from 1969/12/31-19:00:00 to 2022/10/27-12:27:47: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/10/27-12:27:47] [x] exp from 1969/12/31-19:00:00 to 2022/10/27-12:27:47: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/10/27-12:27:47] [?] Can't find ION security database.
+[2022/10/27-12:27:47] [?] Can't find ION security database.
+[2022/10/27-12:27:47] [i] bpclm is running: ipn:22.0
+[2022/10/27-12:27:47] [?] Can't find ION security database.
+[2022/10/27-12:27:47] [i] bpclm is running: ipn:24.0
+[2022/10/27-12:28:33] [?] Can't find ION security database.
+[2022/10/27-12:28:53] [i] Span to engine 22 (max BER 0.000100, max xmit segment size 1400, max recv segment size 1392): xmit segment loss rate 0.673799, recv segment loss rate 0.671704, max timeouts 35.
+[2022/10/27-12:32:21] [?] Can't find ION security database.
+[2022/10/27-12:32:30] [?] Can't find ION security database.
+[2022/10/27-12:33:14] at line 810 of cfdp/library/libcfdpP.c, Can't find CFDP database.
+[2022/10/27-12:33:15] [?] Can't find ION security database.
+[2022/10/27-12:33:27] [i] rfxclock is running.
+[2022/10/27-12:33:27] [i] No congestion collapse predicted.
+[2022/10/27-12:33:27] [i] ionwarn finished.
+[2022/10/27-12:33:28] [i] Span to engine 22 (max BER 0.000100, max xmit segment size 1400, max recv segment size 1): xmit segment loss rate 0.673799, recv segment loss rate 0.000800, max timeouts 35.
+[2022/10/27-12:33:28] [i] Span to engine 24 (max BER 0.000100, max xmit segment size 1400, max recv segment size 1): xmit segment loss rate 0.673799, recv segment loss rate 0.000800, max timeouts 35.
+[2022/10/27-12:33:28] [?] Total max export sessions exceeds estimate.  Session lookup speed may be degraded: -32
+[2022/10/27-12:33:28] [i] ltpclock is running.
+[2022/10/27-12:33:28] [i] ltpdeliv is running.
+[2022/10/27-12:33:28] [i] udplso is running, spec=[192.168.0.36:0], rengine=22.
+[2022/10/27-12:33:28] [i] udplsi is running, spec=[192.168.0.37:4653].
+[2022/10/27-12:33:28] [i] ltpmeter is running.
+[2022/10/27-12:33:28] [i] udplso is running, spec=[192.168.0.37:0], rengine=24.
+[2022/10/27-12:33:28] [i] ltpmeter is running.
+[2022/10/27-12:33:29] [i] No congestion collapse predicted.
+[2022/10/27-12:33:29] [i] ionwarn finished.
+[2022/10/27-12:33:29] [i] This node deploys bundle protocol version 7.
+[2022/10/27-12:33:29] [?] Can't find ION security database.
+[2022/10/27-12:33:29] [?] Warning: running without bundle security.
+[2022/10/27-12:33:29] [?] Can't find ION security database.
+[2022/10/27-12:33:29] [i] bpclock is running.
+[2022/10/27-12:33:29] [?] Can't find ION security database.
+[2022/10/27-12:33:29] [i] ltpclo is running.
+[2022/10/27-12:33:29] [?] Can't find ION security database.
+[2022/10/27-12:33:29] [i] ipnadminep is running.
+[2022/10/27-12:33:29] [?] Can't find ION security database.
+[2022/10/27-12:33:29] [?] Can't find ION security database.
+[2022/10/27-12:33:29] [i] Not configured for multicast; cpsd stopping.
+[2022/10/27-12:33:29] [i] ipnfw is running.
+[2022/10/27-12:33:29] [?] Can't find ION security database.
+[2022/10/27-12:33:29] [i] bptransit is running.
+[2022/10/27-12:33:29] [?] Can't find ION security database.
+[2022/10/27-12:33:29] [?] Can't find ION security database.
+[2022/10/27-12:33:29] [i] ltpclo is running.
+[2022/10/27-12:33:29] [i] ltpcli is running.
+[2022/10/27-12:33:30] [x] src from 1969/12/31-19:00:00 to 2022/10/27-12:33:30: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/10/27-12:33:30] [x] fwd from 1969/12/31-19:00:00 to 2022/10/27-12:33:30: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/10/27-12:33:30] [x] xmt from 1969/12/31-19:00:00 to 2022/10/27-12:33:30: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/10/27-12:33:30] [x] rcv from 1969/12/31-19:00:00 to 2022/10/27-12:33:30: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/10/27-12:33:30] [x] dlv from 1969/12/31-19:00:00 to 2022/10/27-12:33:30: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/10/27-12:33:30] [x] rfw from 1969/12/31-19:00:00 to 2022/10/27-12:33:30: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/10/27-12:33:30] [x] exp from 1969/12/31-19:00:00 to 2022/10/27-12:33:30: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/10/27-12:33:30] [?] Can't find ION security database.
+[2022/10/27-12:33:30] [?] Can't find ION security database.
+[2022/10/27-12:33:30] [i] bpclm is running: ipn:22.0
+[2022/10/27-12:33:30] [?] Can't find ION security database.
+[2022/10/27-12:33:30] [i] bpclm is running: ipn:24.0
+[2022/10/27-12:34:17] [?] Can't find ION security database.
+[2022/10/27-12:34:36] [i] Span to engine 22 (max BER 0.000100, max xmit segment size 1400, max recv segment size 1392): xmit segment loss rate 0.673799, recv segment loss rate 0.671704, max timeouts 35.
+[2022/10/27-12:35:50] [?] Can't find ION security database.
+[2022/10/27-12:37:13] [?] Can't find ION security database.
+[2022/10/27-12:37:47] at line 810 of cfdp/library/libcfdpP.c, Can't find CFDP database.
+[2022/10/27-12:37:48] [?] Can't find ION security database.
+[2022/10/27-12:44:09] [i] rfxclock is running.
+[2022/10/27-12:44:09] [i] No congestion collapse predicted.
+[2022/10/27-12:44:09] [i] ionwarn finished.
+[2022/10/27-12:44:10] [i] Span to engine 22 (max BER 0.000100, max xmit segment size 1400, max recv segment size 1): xmit segment loss rate 0.673799, recv segment loss rate 0.000800, max timeouts 35.
+[2022/10/27-12:44:10] [i] Span to engine 24 (max BER 0.000100, max xmit segment size 1400, max recv segment size 1): xmit segment loss rate 0.673799, recv segment loss rate 0.000800, max timeouts 35.
+[2022/10/27-12:44:10] [?] Total max export sessions exceeds estimate.  Session lookup speed may be degraded: -32
+[2022/10/27-12:44:10] [i] ltpclock is running.
+[2022/10/27-12:44:10] [i] ltpdeliv is running.
+[2022/10/27-12:44:10] [i] udplsi is running, spec=[192.168.0.37:4653].
+[2022/10/27-12:44:10] [i] ltpmeter is running.
+[2022/10/27-12:44:10] [i] udplso is running, spec=[192.168.0.36:0], rengine=22.
+[2022/10/27-12:44:10] [i] udplso is running, spec=[192.168.0.37:0], rengine=24.
+[2022/10/27-12:44:10] [i] ltpmeter is running.
+[2022/10/27-12:44:11] [i] No congestion collapse predicted.
+[2022/10/27-12:44:11] [i] ionwarn finished.
+[2022/10/27-12:44:11] [i] This node deploys bundle protocol version 7.
+[2022/10/27-12:44:11] [?] Can't find ION security database.
+[2022/10/27-12:44:11] [?] Warning: running without bundle security.
+[2022/10/27-12:44:11] [?] Can't find ION security database.
+[2022/10/27-12:44:11] [i] bpclock is running.
+[2022/10/27-12:44:11] [?] Can't find ION security database.
+[2022/10/27-12:44:11] [i] Not configured for multicast; cpsd stopping.
+[2022/10/27-12:44:11] [?] Can't find ION security database.
+[2022/10/27-12:44:11] [i] ltpclo is running.
+[2022/10/27-12:44:11] [?] Can't find ION security database.
+[2022/10/27-12:44:11] [?] Can't find ION security database.
+[2022/10/27-12:44:11] [i] bptransit is running.
+[2022/10/27-12:44:11] [?] Can't find ION security database.
+[2022/10/27-12:44:11] [?] Can't find ION security database.
+[2022/10/27-12:44:11] [?] Can't find ION security database.
+[2022/10/27-12:44:11] [i] ltpcli is running.
+[2022/10/27-12:44:11] [i] ipnadminep is running.
+[2022/10/27-12:44:11] [i] ipnfw is running.
+[2022/10/27-12:44:11] [i] ltpclo is running.
+[2022/10/27-12:44:12] [x] src from 1969/12/31-19:00:00 to 2022/10/27-12:44:12: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/10/27-12:44:12] [x] fwd from 1969/12/31-19:00:00 to 2022/10/27-12:44:12: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/10/27-12:44:12] [x] xmt from 1969/12/31-19:00:00 to 2022/10/27-12:44:12: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/10/27-12:44:12] [x] rcv from 1969/12/31-19:00:00 to 2022/10/27-12:44:12: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/10/27-12:44:12] [x] dlv from 1969/12/31-19:00:00 to 2022/10/27-12:44:12: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/10/27-12:44:12] [x] rfw from 1969/12/31-19:00:00 to 2022/10/27-12:44:12: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/10/27-12:44:12] [x] exp from 1969/12/31-19:00:00 to 2022/10/27-12:44:12: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/10/27-12:44:12] [?] Can't find ION security database.
+[2022/10/27-12:44:12] [?] Can't find ION security database.
+[2022/10/27-12:44:12] [i] bpclm is running: ipn:22.0
+[2022/10/27-12:44:12] [?] Can't find ION security database.
+[2022/10/27-12:44:12] [i] bpclm is running: ipn:24.0
+[2022/10/27-12:44:27] at line 810 of cfdp/library/libcfdpP.c, Can't find CFDP database.
+[2022/10/27-12:44:28] [?] Can't find ION security database.
+[2022/10/27-12:44:28] [i] Plan has been stopped: ipn:22.0
+[2022/10/27-12:44:28] [i] ipnfw forwarder has ended.
+[2022/10/27-12:44:28] [i] Endpoint has been stopped.
+[2022/10/27-12:44:28] [i] bpclm has ended: ipn:22.0
+[2022/10/27-12:44:28] [i] Administrative endpoint terminated.
+[2022/10/27-12:44:28] [i] ipnadminep has ended.
+[2022/10/27-12:44:28] [i] Outduct has been stopped: 24
+[2022/10/27-12:44:28] [i] ltpclo outduct closed.
+[2022/10/27-12:44:28] [i] ltpclo duct has ended.
+[2022/10/27-12:44:28] [i] Plan has been stopped: ipn:24.0
+[2022/10/27-12:44:28] [i] bpclm has ended: ipn:24.0
+[2022/10/27-12:44:28] [i] Outduct has been stopped: 22
+[2022/10/27-12:44:28] [i] ltpclo outduct closed.
+[2022/10/27-12:44:28] [i] ltpclo duct has ended.
+[2022/10/27-12:44:28] [i] bpclock has ended.
+[2022/10/27-12:44:28] [i] ltpcli receiver thread has ended.
+[2022/10/27-12:44:28] [i] ltpcli duct has ended.
+[2022/10/27-12:44:28] [i] bptransit has ended.
+[2022/10/27-12:44:29] [i] LTP meter to engine 22 is stopped.
+[2022/10/27-12:44:29] [i] ltpmeter has ended.
+[2022/10/27-12:44:29] [i] LTP meter to engine 24 is stopped.
+[2022/10/27-12:44:29] [i] ltpmeter has ended.
+[2022/10/27-12:44:29] [i] LSO to engine 22 is stopped.
+[2022/10/27-12:44:29] [i] udplsa receiver thread has ended.
+[2022/10/27-12:44:29] [i] LSO to engine 24 is stopped.
+[2022/10/27-12:44:29] [i] udplsa receiver thread has ended.
+[2022/10/27-12:44:29] [i] udplsa receiver thread has ended.
+[2022/10/27-12:44:29] [i] udplsi has ended.
+[2022/10/27-12:44:29] [i] udplso has ended.
+[2022/10/27-12:44:29] [i] ltpclock has ended.
+[2022/10/27-12:44:29] [i] udplso has ended.
+[2022/10/27-12:44:29] [i] ltpdeliv has ended.
+[2022/10/27-12:44:30] [i] rfxclock has ended.
+[2022/10/27-12:44:41] [i] rfxclock is running.
+[2022/10/27-12:44:41] [i] No congestion collapse predicted.
+[2022/10/27-12:44:41] [i] ionwarn finished.
+[2022/10/27-12:44:42] [i] Span to engine 22 (max BER 0.000100, max xmit segment size 1400, max recv segment size 1): xmit segment loss rate 0.673799, recv segment loss rate 0.000800, max timeouts 35.
+[2022/10/27-12:44:42] [i] Span to engine 24 (max BER 0.000100, max xmit segment size 1400, max recv segment size 1): xmit segment loss rate 0.673799, recv segment loss rate 0.000800, max timeouts 35.
+[2022/10/27-12:44:42] [?] Total max export sessions exceeds estimate.  Session lookup speed may be degraded: -32
+[2022/10/27-12:44:42] [i] ltpclock is running.
+[2022/10/27-12:44:42] [i] ltpdeliv is running.
+[2022/10/27-12:44:42] [i] udplso is running, spec=[192.168.0.36:0], rengine=22.
+[2022/10/27-12:44:42] [i] ltpmeter is running.
+[2022/10/27-12:44:42] [i] ltpmeter is running.
+[2022/10/27-12:44:42] [i] udplsi is running, spec=[192.168.0.37:4653].
+[2022/10/27-12:44:42] [i] udplso is running, spec=[192.168.0.37:0], rengine=24.
+[2022/10/27-12:44:43] [i] No congestion collapse predicted.
+[2022/10/27-12:44:43] [i] ionwarn finished.
+[2022/10/27-12:44:43] [i] This node deploys bundle protocol version 7.
+[2022/10/27-12:44:43] [?] Can't find ION security database.
+[2022/10/27-12:44:43] [?] Warning: running without bundle security.
+[2022/10/27-12:44:43] [?] Can't find ION security database.
+[2022/10/27-12:44:43] [i] bpclock is running.
+[2022/10/27-12:44:43] [?] Can't find ION security database.
+[2022/10/27-12:44:43] [i] Not configured for multicast; cpsd stopping.
+[2022/10/27-12:44:43] [?] Can't find ION security database.
+[2022/10/27-12:44:43] [i] bptransit is running.
+[2022/10/27-12:44:43] [?] Can't find ION security database.
+[2022/10/27-12:44:43] [i] ipnfw is running.
+[2022/10/27-12:44:43] [?] Can't find ION security database.
+[2022/10/27-12:44:43] [i] ipnadminep is running.
+[2022/10/27-12:44:43] [?] Can't find ION security database.
+[2022/10/27-12:44:43] [?] Can't find ION security database.
+[2022/10/27-12:44:43] [i] ltpcli is running.
+[2022/10/27-12:44:43] [i] ltpclo is running.
+[2022/10/27-12:44:43] [?] Can't find ION security database.
+[2022/10/27-12:44:43] [i] ltpclo is running.
+[2022/10/27-12:44:44] [x] src from 1969/12/31-19:00:00 to 2022/10/27-12:44:44: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/10/27-12:44:44] [x] fwd from 1969/12/31-19:00:00 to 2022/10/27-12:44:44: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/10/27-12:44:44] [x] xmt from 1969/12/31-19:00:00 to 2022/10/27-12:44:44: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/10/27-12:44:44] [x] rcv from 1969/12/31-19:00:00 to 2022/10/27-12:44:44: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/10/27-12:44:44] [x] dlv from 1969/12/31-19:00:00 to 2022/10/27-12:44:44: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/10/27-12:44:44] [x] rfw from 1969/12/31-19:00:00 to 2022/10/27-12:44:44: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/10/27-12:44:44] [x] exp from 1969/12/31-19:00:00 to 2022/10/27-12:44:44: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/10/27-12:44:44] [?] Can't find ION security database.
+[2022/10/27-12:44:44] [?] Can't find ION security database.
+[2022/10/27-12:44:44] [i] bpclm is running: ipn:22.0
+[2022/10/27-12:44:44] [?] Can't find ION security database.
+[2022/10/27-12:44:44] [i] bpclm is running: ipn:24.0
+[2022/10/27-12:44:59] [?] Can't find ION security database.
+[2022/10/27-12:45:05] [i] Span to engine 22 (max BER 0.000100, max xmit segment size 1400, max recv segment size 112): xmit segment loss rate 0.673799, recv segment loss rate 0.085721, max timeouts 35.
+[2022/10/27-12:45:35] [?] Can't find ION security database.
+[2022/10/27-12:45:37] [i] Span to engine 22 (max BER 0.000100, max xmit segment size 1400, max recv segment size 195): xmit segment loss rate 0.673799, recv segment loss rate 0.144470, max timeouts 35.
+[2022/10/27-12:46:23] [?] Can't find ION security database.
+[2022/10/27-12:46:43] [i] Span to engine 22 (max BER 0.000100, max xmit segment size 1400, max recv segment size 625): xmit segment loss rate 0.673799, recv segment loss rate 0.393535, max timeouts 35.
+[2022/10/27-12:46:44] [i] Span to engine 22 (max BER 0.000100, max xmit segment size 1400, max recv segment size 953): xmit segment loss rate 0.673799, recv segment loss rate 0.533531, max timeouts 35.
+[2022/10/27-12:55:57] at line 810 of cfdp/library/libcfdpP.c, Can't find CFDP database.
+[2022/10/27-12:55:59] [?] Can't find ION security database.
+[2022/10/27-12:55:59] [i] Endpoint has been stopped.
+[2022/10/27-12:55:59] [i] Administrative endpoint terminated.
+[2022/10/27-12:55:59] [i] ipnadminep has ended.
+[2022/10/27-12:55:59] [i] ipnfw forwarder has ended.
+[2022/10/27-12:55:59] [i] Plan has been stopped: ipn:24.0
+[2022/10/27-12:55:59] [i] Outduct has been stopped: 22
+[2022/10/27-12:55:59] [i] ltpclo outduct closed.
+[2022/10/27-12:55:59] [i] bpclm has ended: ipn:24.0
+[2022/10/27-12:55:59] [i] ltpclo duct has ended.
+[2022/10/27-12:55:59] [i] Plan has been stopped: ipn:22.0
+[2022/10/27-12:55:59] [i] bpclm has ended: ipn:22.0
+[2022/10/27-12:55:59] [i] Outduct has been stopped: 24
+[2022/10/27-12:55:59] [i] ltpclo outduct closed.
+[2022/10/27-12:55:59] [i] ltpclo duct has ended.
+[2022/10/27-12:55:59] [i] bpclock has ended.
+[2022/10/27-12:55:59] [i] ltpcli receiver thread has ended.
+[2022/10/27-12:55:59] [i] ltpcli duct has ended.
+[2022/10/27-12:55:59] [i] bptransit has ended.
+[2022/10/27-12:56:00] [i] LSO to engine 22 is stopped.
+[2022/10/27-12:56:00] [i] udplsa receiver thread has ended.
+[2022/10/27-12:56:00] [i] LTP meter to engine 22 is stopped.
+[2022/10/27-12:56:00] [i] ltpmeter has ended.
+[2022/10/27-12:56:00] [i] LTP meter to engine 24 is stopped.
+[2022/10/27-12:56:00] [i] ltpmeter has ended.
+[2022/10/27-12:56:00] [i] udplsa receiver thread has ended.
+[2022/10/27-12:56:00] [i] udplsi has ended.
+[2022/10/27-12:56:00] [i] LSO to engine 24 is stopped.
+[2022/10/27-12:56:00] [i] udplso has ended.
+[2022/10/27-12:56:00] [i] udplsa receiver thread has ended.
+[2022/10/27-12:56:00] [i] ltpclock has ended.
+[2022/10/27-12:56:00] [i] udplso has ended.
+[2022/10/27-12:56:00] [i] ltpdeliv has ended.
+[2022/10/27-12:56:01] [i] rfxclock has ended.
+[2022/10/27-12:56:10] [i] rfxclock is running.
+[2022/10/27-12:56:10] [i] No congestion collapse predicted.
+[2022/10/27-12:56:10] [i] ionwarn finished.
+[2022/10/27-12:56:11] [i] Span to engine 22 (max BER 0.000100, max xmit segment size 1400, max recv segment size 1): xmit segment loss rate 0.673799, recv segment loss rate 0.000800, max timeouts 35.
+[2022/10/27-12:56:11] [i] Span to engine 24 (max BER 0.000100, max xmit segment size 1400, max recv segment size 1): xmit segment loss rate 0.673799, recv segment loss rate 0.000800, max timeouts 35.
+[2022/10/27-12:56:11] [?] Total max export sessions exceeds estimate.  Session lookup speed may be degraded: -32
+[2022/10/27-12:56:11] [i] ltpclock is running.
+[2022/10/27-12:56:11] [i] ltpdeliv is running.
+[2022/10/27-12:56:11] [i] udplso is running, spec=[192.168.0.36:0], rengine=22.
+[2022/10/27-12:56:11] [i] ltpmeter is running.
+[2022/10/27-12:56:11] [i] udplso is running, spec=[192.168.0.37:0], rengine=24.
+[2022/10/27-12:56:11] [i] udplsi is running, spec=[192.168.0.37:4653].
+[2022/10/27-12:56:11] [i] ltpmeter is running.
+[2022/10/27-12:56:12] [i] No congestion collapse predicted.
+[2022/10/27-12:56:12] [i] ionwarn finished.
+[2022/10/27-12:56:12] [i] This node deploys bundle protocol version 7.
+[2022/10/27-12:56:12] [?] Can't find ION security database.
+[2022/10/27-12:56:12] [?] Warning: running without bundle security.
+[2022/10/27-12:56:12] [?] Can't find ION security database.
+[2022/10/27-12:56:12] [i] bpclock is running.
+[2022/10/27-12:56:12] [?] Can't find ION security database.
+[2022/10/27-12:56:12] [i] Not configured for multicast; cpsd stopping.
+[2022/10/27-12:56:12] [?] Can't find ION security database.
+[2022/10/27-12:56:12] [i] ltpclo is running.
+[2022/10/27-12:56:12] [?] Can't find ION security database.
+[2022/10/27-12:56:12] [i] ipnfw is running.
+[2022/10/27-12:56:12] [?] Can't find ION security database.
+[2022/10/27-12:56:12] [i] ipnadminep is running.
+[2022/10/27-12:56:12] [?] Can't find ION security database.
+[2022/10/27-12:56:12] [i] bptransit is running.
+[2022/10/27-12:56:12] [?] Can't find ION security database.
+[2022/10/27-12:56:12] [i] ltpcli is running.
+[2022/10/27-12:56:12] [?] Can't find ION security database.
+[2022/10/27-12:56:12] [i] ltpclo is running.
+[2022/10/27-12:56:13] [x] src from 1969/12/31-19:00:00 to 2022/10/27-12:56:13: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/10/27-12:56:13] [x] fwd from 1969/12/31-19:00:00 to 2022/10/27-12:56:13: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/10/27-12:56:13] [x] xmt from 1969/12/31-19:00:00 to 2022/10/27-12:56:13: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/10/27-12:56:13] [x] rcv from 1969/12/31-19:00:00 to 2022/10/27-12:56:13: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/10/27-12:56:13] [x] dlv from 1969/12/31-19:00:00 to 2022/10/27-12:56:13: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/10/27-12:56:13] [x] rfw from 1969/12/31-19:00:00 to 2022/10/27-12:56:13: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/10/27-12:56:13] [x] exp from 1969/12/31-19:00:00 to 2022/10/27-12:56:13: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/10/27-12:56:13] [?] Can't find ION security database.
+[2022/10/27-12:56:13] [?] Can't find ION security database.
+[2022/10/27-12:56:13] [i] bpclm is running: ipn:22.0
+[2022/10/27-12:56:13] [?] Can't find ION security database.
+[2022/10/27-12:56:13] [i] bpclm is running: ipn:24.0
+[2022/10/27-12:56:37] [?] Can't find ION security database.
+[2022/10/27-12:57:06] [?] Can't find ION security database.
+[2022/10/27-14:56:55] [?] Can't find ION security database.
+[2022/10/27-15:05:19] at line 810 of cfdp/library/libcfdpP.c, Can't find CFDP database.
+[2022/10/27-15:05:20] [?] Can't find ION security database.
+[2022/10/27-15:10:08] [i] rfxclock is running.
+[2022/10/27-15:10:08] [i] No congestion collapse predicted.
+[2022/10/27-15:10:08] [i] ionwarn finished.
+[2022/10/27-15:10:10] [i] Span to engine 22 (max BER 0.000100, max xmit segment size 1400, max recv segment size 1): xmit segment loss rate 0.673799, recv segment loss rate 0.000800, max timeouts 35.
+[2022/10/27-15:10:10] [i] Span to engine 24 (max BER 0.000100, max xmit segment size 1400, max recv segment size 1): xmit segment loss rate 0.673799, recv segment loss rate 0.000800, max timeouts 35.
+[2022/10/27-15:10:10] [?] Total max export sessions exceeds estimate.  Session lookup speed may be degraded: -32
+[2022/10/27-15:10:10] [i] ltpdeliv is running.
+[2022/10/27-15:10:10] [i] udplso is running, spec=[192.168.0.36:0], rengine=22.
+[2022/10/27-15:10:10] [i] udplso is running, spec=[192.168.0.37:0], rengine=24.
+[2022/10/27-15:10:10] [i] ltpclock is running.
+[2022/10/27-15:10:10] [i] udplsi is running, spec=[192.168.0.37:4653].
+[2022/10/27-15:10:10] [i] ltpmeter is running.
+[2022/10/27-15:10:10] [i] ltpmeter is running.
+[2022/10/27-15:10:10] [i] No congestion collapse predicted.
+[2022/10/27-15:10:10] [i] ionwarn finished.
+[2022/10/27-15:10:11] [i] This node deploys bundle protocol version 7.
+[2022/10/27-15:10:11] [?] Can't find ION security database.
+[2022/10/27-15:10:11] [?] Warning: running without bundle security.
+[2022/10/27-15:10:11] [?] Can't find ION security database.
+[2022/10/27-15:10:11] [i] bpclock is running.
+[2022/10/27-15:10:11] [?] Can't find ION security database.
+[2022/10/27-15:10:11] [i] Not configured for multicast; cpsd stopping.
+[2022/10/27-15:10:11] [?] Can't find ION security database.
+[2022/10/27-15:10:11] [?] Can't find ION security database.
+[2022/10/27-15:10:11] [i] ltpcli is running.
+[2022/10/27-15:10:11] [i] ltpclo is running.
+[2022/10/27-15:10:11] [?] Can't find ION security database.
+[2022/10/27-15:10:11] [?] Can't find ION security database.
+[2022/10/27-15:10:11] [i] bptransit is running.
+[2022/10/27-15:10:11] [i] ltpclo is running.
+[2022/10/27-15:10:11] [?] Can't find ION security database.
+[2022/10/27-15:10:11] [i] ipnadminep is running.
+[2022/10/27-15:10:11] [?] Can't find ION security database.
+[2022/10/27-15:10:11] [i] ipnfw is running.
+[2022/10/27-15:10:12] [x] src from 1969/12/31-19:00:00 to 2022/10/27-15:10:12: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/10/27-15:10:12] [x] fwd from 1969/12/31-19:00:00 to 2022/10/27-15:10:12: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/10/27-15:10:12] [x] xmt from 1969/12/31-19:00:00 to 2022/10/27-15:10:12: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/10/27-15:10:12] [x] rcv from 1969/12/31-19:00:00 to 2022/10/27-15:10:12: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/10/27-15:10:12] [x] dlv from 1969/12/31-19:00:00 to 2022/10/27-15:10:12: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/10/27-15:10:12] [x] rfw from 1969/12/31-19:00:00 to 2022/10/27-15:10:12: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/10/27-15:10:12] [x] exp from 1969/12/31-19:00:00 to 2022/10/27-15:10:12: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/10/27-15:10:12] [?] Can't find ION security database.
+[2022/10/27-15:10:12] [?] Can't find ION security database.
+[2022/10/27-15:10:12] [i] bpclm is running: ipn:22.0
+[2022/10/27-15:10:12] [?] Can't find ION security database.
+[2022/10/27-15:10:12] [i] bpclm is running: ipn:24.0
+[2022/10/27-15:10:44] [i] Span to engine 22 (max BER 0.000100, max xmit segment size 1400, max recv segment size 89): xmit segment loss rate 0.673799, recv segment loss rate 0.068739, max timeouts 35.
+[2022/10/27-15:10:59] [?] Can't find ION security database.
+[2022/10/27-15:12:05] [?] Can't find ION security database.
+[2022/10/27-15:12:34] [?] Can't find ION security database.
+[2022/10/27-15:13:40] [i] Span to engine 22 (max BER 0.000100, max xmit segment size 1400, max recv segment size 191): xmit segment loss rate 0.673799, recv segment loss rate 0.141727, max timeouts 35.
+[2022/10/27-16:10:07] [i] Congestion collapse forecast: 2022/12/24-17:03:28.
+[2022/10/27-16:10:07] [i] ionwarn finished.
+[2022/10/27-16:10:08] [x] src from 1969/12/31-19:00:00 to 2022/10/27-16:10:08: (0) 0 0 (1) 4 86 (2) 0 0 (+) 4 86
+[2022/10/27-16:10:08] [x] fwd from 1969/12/31-19:00:00 to 2022/10/27-16:10:08: (0) 0 0 (1) 0 0 (2) 0 0 (+) 4 86
+[2022/10/27-16:10:08] [x] xmt from 1969/12/31-19:00:00 to 2022/10/27-16:10:08: (0) 0 0 (1) 4 86 (2) 0 0 (+) 4 86
+[2022/10/27-16:10:08] [x] rcv from 1969/12/31-19:00:00 to 2022/10/27-16:10:08: (0) 0 0 (1) 5 136 (2) 0 0 (+) 5 136
+[2022/10/27-16:10:08] [x] dlv from 1969/12/31-19:00:00 to 2022/10/27-16:10:08: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/10/27-16:10:08] [x] rfw from 1969/12/31-19:00:00 to 2022/10/27-16:10:08: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/10/27-16:10:08] [x] exp from 1969/12/31-19:00:00 to 2022/10/27-16:10:08: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/10/27-16:10:10] [i] No congestion collapse predicted.
+[2022/10/27-16:10:10] [i] ionwarn finished.
+[2022/10/27-16:10:11] [x] src from 1969/12/31-19:00:00 to 2022/10/27-16:10:11: (0) 0 0 (1) 4 86 (2) 0 0 (+) 4 86
+[2022/10/27-16:10:11] [x] fwd from 1969/12/31-19:00:00 to 2022/10/27-16:10:11: (0) 0 0 (1) 0 0 (2) 0 0 (+) 4 86
+[2022/10/27-16:10:11] [x] xmt from 1969/12/31-19:00:00 to 2022/10/27-16:10:11: (0) 0 0 (1) 4 86 (2) 0 0 (+) 4 86
+[2022/10/27-16:10:11] [x] rcv from 1969/12/31-19:00:00 to 2022/10/27-16:10:11: (0) 0 0 (1) 5 136 (2) 0 0 (+) 5 136
+[2022/10/27-16:10:11] [x] dlv from 1969/12/31-19:00:00 to 2022/10/27-16:10:11: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/10/27-16:10:11] [x] rfw from 1969/12/31-19:00:00 to 2022/10/27-16:10:11: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/10/27-16:10:11] [x] exp from 1969/12/31-19:00:00 to 2022/10/27-16:10:11: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/11/01-17:57:41] [i] rfxclock is running.
+[2022/11/01-17:57:41] [i] No congestion collapse predicted.
+[2022/11/01-17:57:41] [i] ionwarn finished.
+[2022/11/01-17:57:42] [i] Span to engine 22 (max BER 0.000100, max xmit segment size 1400, max recv segment size 1): xmit segment loss rate 0.673799, recv segment loss rate 0.000800, max timeouts 35.
+[2022/11/01-17:57:42] [i] Span to engine 24 (max BER 0.000100, max xmit segment size 1400, max recv segment size 1): xmit segment loss rate 0.673799, recv segment loss rate 0.000800, max timeouts 35.
+[2022/11/01-17:57:42] [?] Total max export sessions exceeds estimate.  Session lookup speed may be degraded: -32
+[2022/11/01-17:57:42] [i] ltpclock is running.
+[2022/11/01-17:57:42] [i] ltpdeliv is running.
+[2022/11/01-17:57:42] [i] ltpmeter is running.
+[2022/11/01-17:57:42] [i] udplso is running, spec=[192.168.0.37:0], rengine=24.
+[2022/11/01-17:57:42] [i] udplso is running, spec=[192.168.0.36:0], rengine=22.
+[2022/11/01-17:57:42] [i] udplsi is running, spec=[192.168.0.37:4653].
+[2022/11/01-17:57:42] [i] ltpmeter is running.
+[2022/11/01-17:57:43] [i] No congestion collapse predicted.
+[2022/11/01-17:57:43] [i] ionwarn finished.
+[2022/11/01-17:57:43] [i] This node deploys bundle protocol version 7.
+[2022/11/01-17:57:43] [?] Can't find ION security database.
+[2022/11/01-17:57:43] [?] Warning: running without bundle security.
+[2022/11/01-17:57:43] [?] Can't find ION security database.
+[2022/11/01-17:57:43] [?] Can't find ION security database.
+[2022/11/01-17:57:43] [i] Not configured for multicast; cpsd stopping.
+[2022/11/01-17:57:43] [i] bpclock is running.
+[2022/11/01-17:57:43] [?] Can't find ION security database.
+[2022/11/01-17:57:43] [?] Can't find ION security database.
+[2022/11/01-17:57:43] [i] bptransit is running.
+[2022/11/01-17:57:43] [i] ipnadminep is running.
+[2022/11/01-17:57:43] [?] Can't find ION security database.
+[2022/11/01-17:57:43] [?] Can't find ION security database.
+[2022/11/01-17:57:43] [?] Can't find ION security database.
+[2022/11/01-17:57:43] [?] Can't find ION security database.
+[2022/11/01-17:57:43] [i] ltpclo is running.
+[2022/11/01-17:57:43] [i] ltpclo is running.
+[2022/11/01-17:57:43] [i] ltpcli is running.
+[2022/11/01-17:57:43] [i] ipnfw is running.
+[2022/11/01-17:57:44] [x] src from 1969/12/31-19:00:00 to 2022/11/01-17:57:44: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/11/01-17:57:44] [x] fwd from 1969/12/31-19:00:00 to 2022/11/01-17:57:44: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/11/01-17:57:44] [x] xmt from 1969/12/31-19:00:00 to 2022/11/01-17:57:44: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/11/01-17:57:44] [x] rcv from 1969/12/31-19:00:00 to 2022/11/01-17:57:44: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/11/01-17:57:44] [x] dlv from 1969/12/31-19:00:00 to 2022/11/01-17:57:44: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/11/01-17:57:44] [x] rfw from 1969/12/31-19:00:00 to 2022/11/01-17:57:44: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/11/01-17:57:44] [x] exp from 1969/12/31-19:00:00 to 2022/11/01-17:57:44: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/11/01-17:57:44] [?] Can't find ION security database.
+[2022/11/01-17:57:44] [?] Can't find ION security database.
+[2022/11/01-17:57:44] [?] Can't find ION security database.
+[2022/11/01-17:57:44] [i] bpclm is running: ipn:24.0
+[2022/11/01-17:57:44] [i] bpclm is running: ipn:22.0
+[2022/11/01-17:59:50] [?] Can't find ION security database.
+[2022/11/01-18:00:47] [?] Can't find ION security database.
+[2022/11/01-18:01:13] [i] Span to engine 22 (max BER 0.000100, max xmit segment size 1400, max recv segment size 98): xmit segment loss rate 0.673799, recv segment loss rate 0.075421, max timeouts 35.
+[2022/11/05-21:47:28] [x] src from 1969/12/31-19:00:00 to 2022/11/05-21:47:28: (0) 0 0 (1) 1 4 (2) 0 0 (+) 1 4
+[2022/11/05-21:47:28] [x] fwd from 1969/12/31-19:00:00 to 2022/11/05-21:47:28: (0) 0 0 (1) 0 0 (2) 0 0 (+) 1 4
+[2022/11/05-21:47:28] [x] xmt from 1969/12/31-19:00:00 to 2022/11/05-21:47:28: (0) 0 0 (1) 1 4 (2) 0 0 (+) 1 4
+[2022/11/05-21:47:28] [x] rcv from 1969/12/31-19:00:00 to 2022/11/05-21:47:28: (0) 0 0 (1) 1 16 (2) 0 0 (+) 1 16
+[2022/11/05-21:47:28] [x] dlv from 1969/12/31-19:00:00 to 2022/11/05-21:47:28: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/11/05-21:47:28] [x] rfw from 1969/12/31-19:00:00 to 2022/11/05-21:47:28: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/11/05-21:47:28] [x] exp from 1969/12/31-19:00:00 to 2022/11/05-21:47:28: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/11/05-21:47:28] [i] No congestion collapse predicted.
+[2022/11/05-21:47:28] [i] ionwarn finished.
+[2022/11/05-22:54:51] [?] Can't find ION security database.
+[2022/11/06-15:45:38] [i] rfxclock is running.
+[2022/11/06-15:45:38] [i] No congestion collapse predicted.
+[2022/11/06-15:45:38] [i] ionwarn finished.
+[2022/11/06-15:45:39] [i] Span to engine 22 (max BER 0.000100, max xmit segment size 1400, max recv segment size 1): xmit segment loss rate 0.673799, recv segment loss rate 0.000800, max timeouts 35.
+[2022/11/06-15:45:39] [i] Span to engine 24 (max BER 0.000100, max xmit segment size 1400, max recv segment size 1): xmit segment loss rate 0.673799, recv segment loss rate 0.000800, max timeouts 35.
+[2022/11/06-15:45:39] [?] Total max export sessions exceeds estimate.  Session lookup speed may be degraded: -32
+[2022/11/06-15:45:39] [i] ltpmeter is running.
+[2022/11/06-15:45:39] [i] ltpdeliv is running.
+[2022/11/06-15:45:39] [i] ltpclock is running.
+[2022/11/06-15:45:39] [i] ltpmeter is running.
+[2022/11/06-15:45:39] [i] udplsi is running, spec=[192.168.0.37:4653].
+[2022/11/06-15:45:39] [i] udplso is running, spec=[192.168.0.36:0], rengine=22.
+[2022/11/06-15:45:39] [i] udplso is running, spec=[192.168.0.37:0], rengine=24.
+[2022/11/06-15:45:40] [i] No congestion collapse predicted.
+[2022/11/06-15:45:40] [i] ionwarn finished.
+[2022/11/06-15:45:40] [i] This node deploys bundle protocol version 7.
+[2022/11/06-15:45:40] [?] Can't find ION security database.
+[2022/11/06-15:45:40] [?] Warning: running without bundle security.
+[2022/11/06-15:45:40] [?] Can't find ION security database.
+[2022/11/06-15:45:40] [i] bpclock is running.
+[2022/11/06-15:45:40] [?] Can't find ION security database.
+[2022/11/06-15:45:40] [i] Not configured for multicast; cpsd stopping.
+[2022/11/06-15:45:40] [?] Can't find ION security database.
+[2022/11/06-15:45:40] [?] Can't find ION security database.
+[2022/11/06-15:45:40] [?] Can't find ION security database.
+[2022/11/06-15:45:40] [i] ltpcli is running.
+[2022/11/06-15:45:40] [i] bptransit is running.
+[2022/11/06-15:45:40] [?] Can't find ION security database.
+[2022/11/06-15:45:40] [?] Can't find ION security database.
+[2022/11/06-15:45:40] [?] Can't find ION security database.
+[2022/11/06-15:45:40] [i] ipnadminep is running.
+[2022/11/06-15:45:40] [i] ipnfw is running.
+[2022/11/06-15:45:40] [i] ltpclo is running.
+[2022/11/06-15:45:40] [i] ltpclo is running.
+[2022/11/06-15:45:41] [x] src from 1969/12/31-19:00:00 to 2022/11/06-15:45:41: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/11/06-15:45:41] [x] fwd from 1969/12/31-19:00:00 to 2022/11/06-15:45:41: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/11/06-15:45:41] [x] xmt from 1969/12/31-19:00:00 to 2022/11/06-15:45:41: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/11/06-15:45:41] [x] rcv from 1969/12/31-19:00:00 to 2022/11/06-15:45:41: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/11/06-15:45:41] [x] dlv from 1969/12/31-19:00:00 to 2022/11/06-15:45:41: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/11/06-15:45:41] [x] rfw from 1969/12/31-19:00:00 to 2022/11/06-15:45:41: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/11/06-15:45:41] [x] exp from 1969/12/31-19:00:00 to 2022/11/06-15:45:41: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/11/06-15:45:41] [?] Can't find ION security database.
+[2022/11/06-15:45:41] [?] Can't find ION security database.
+[2022/11/06-15:45:41] [i] bpclm is running: ipn:22.0
+[2022/11/06-15:45:41] [?] Can't find ION security database.
+[2022/11/06-15:45:41] [i] bpclm is running: ipn:24.0
+[2022/11/06-15:45:55] [?] Can't find ION security database.
+[2022/11/06-15:46:32] [?] Can't find ION security database.
+[2022/11/06-20:23:39] [i] rfxclock is running.
+[2022/11/06-20:23:39] [i] No congestion collapse predicted.
+[2022/11/06-20:23:39] [i] ionwarn finished.
+[2022/11/06-20:23:40] [i] Span to engine 22 (max BER 0.000100, max xmit segment size 1400, max recv segment size 1): xmit segment loss rate 0.673799, recv segment loss rate 0.000800, max timeouts 35.
+[2022/11/06-20:23:40] [i] Span to engine 24 (max BER 0.000100, max xmit segment size 1400, max recv segment size 1): xmit segment loss rate 0.673799, recv segment loss rate 0.000800, max timeouts 35.
+[2022/11/06-20:23:40] [?] Total max export sessions exceeds estimate.  Session lookup speed may be degraded: -32
+[2022/11/06-20:23:40] [i] ltpclock is running.
+[2022/11/06-20:23:40] [i] ltpdeliv is running.
+[2022/11/06-20:23:40] [i] ltpmeter is running.
+[2022/11/06-20:23:40] [i] ltpmeter is running.
+[2022/11/06-20:23:40] [i] udplsi is running, spec=[192.168.0.37:4653].
+[2022/11/06-20:23:40] [i] udplso is running, spec=[192.168.0.37:0], rengine=24.
+[2022/11/06-20:23:40] [i] udplso is running, spec=[192.168.0.36:0], rengine=22.
+[2022/11/06-20:23:41] [i] No congestion collapse predicted.
+[2022/11/06-20:23:41] [i] ionwarn finished.
+[2022/11/06-20:23:41] [i] This node deploys bundle protocol version 7.
+[2022/11/06-20:23:41] [?] Can't find ION security database.
+[2022/11/06-20:23:41] [?] Warning: running without bundle security.
+[2022/11/06-20:23:41] [?] Can't find ION security database.
+[2022/11/06-20:23:41] [i] bpclock is running.
+[2022/11/06-20:23:41] [?] Can't find ION security database.
+[2022/11/06-20:23:41] [i] ltpcli is running.
+[2022/11/06-20:23:41] [?] Can't find ION security database.
+[2022/11/06-20:23:41] [i] ipnadminep is running.
+[2022/11/06-20:23:41] [?] Can't find ION security database.
+[2022/11/06-20:23:41] [?] Can't find ION security database.
+[2022/11/06-20:23:41] [i] Not configured for multicast; cpsd stopping.
+[2022/11/06-20:23:41] [?] Can't find ION security database.
+[2022/11/06-20:23:41] [?] Can't find ION security database.
+[2022/11/06-20:23:41] [i] bptransit is running.
+[2022/11/06-20:23:41] [?] Can't find ION security database.
+[2022/11/06-20:23:41] [i] ipnfw is running.
+[2022/11/06-20:23:41] [i] ltpclo is running.
+[2022/11/06-20:23:41] [i] ltpclo is running.
+[2022/11/06-20:23:42] [x] src from 1969/12/31-19:00:00 to 2022/11/06-20:23:42: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/11/06-20:23:42] [x] fwd from 1969/12/31-19:00:00 to 2022/11/06-20:23:42: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/11/06-20:23:42] [x] xmt from 1969/12/31-19:00:00 to 2022/11/06-20:23:42: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/11/06-20:23:42] [x] rcv from 1969/12/31-19:00:00 to 2022/11/06-20:23:42: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/11/06-20:23:42] [x] dlv from 1969/12/31-19:00:00 to 2022/11/06-20:23:42: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/11/06-20:23:42] [x] rfw from 1969/12/31-19:00:00 to 2022/11/06-20:23:42: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/11/06-20:23:42] [x] exp from 1969/12/31-19:00:00 to 2022/11/06-20:23:42: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/11/06-20:23:42] [?] Can't find ION security database.
+[2022/11/06-20:23:42] [?] Can't find ION security database.
+[2022/11/06-20:23:42] [?] Can't find ION security database.
+[2022/11/06-20:23:42] [i] bpclm is running: ipn:22.0
+[2022/11/06-20:23:42] [i] bpclm is running: ipn:24.0
+[2022/11/06-20:23:48] [?] Can't find ION security database.
+[2022/11/06-20:33:31] [?] Can't find ION security database.
+[2022/11/06-20:38:33] at line 810 of cfdp/library/libcfdpP.c, Can't find CFDP database.
+[2022/11/06-20:38:34] [?] Can't find ION security database.
+[2022/11/06-20:38:45] [i] rfxclock is running.
+[2022/11/06-20:38:45] [i] No congestion collapse predicted.
+[2022/11/06-20:38:45] [i] ionwarn finished.
+[2022/11/06-20:38:46] [i] Span to engine 22 (max BER 0.000100, max xmit segment size 1400, max recv segment size 1): xmit segment loss rate 0.673799, recv segment loss rate 0.000800, max timeouts 35.
+[2022/11/06-20:38:46] [i] Span to engine 24 (max BER 0.000100, max xmit segment size 1400, max recv segment size 1): xmit segment loss rate 0.673799, recv segment loss rate 0.000800, max timeouts 35.
+[2022/11/06-20:38:46] [?] Total max export sessions exceeds estimate.  Session lookup speed may be degraded: -32
+[2022/11/06-20:38:46] [i] ltpclock is running.
+[2022/11/06-20:38:46] [i] udplsi is running, spec=[192.168.0.37:4653].
+[2022/11/06-20:38:46] [i] udplso is running, spec=[192.168.0.36:0], rengine=22.
+[2022/11/06-20:38:46] [i] ltpdeliv is running.
+[2022/11/06-20:38:46] [i] udplso is running, spec=[192.168.0.37:0], rengine=24.
+[2022/11/06-20:38:46] [i] ltpmeter is running.
+[2022/11/06-20:38:46] [i] ltpmeter is running.
+[2022/11/06-20:38:47] [i] No congestion collapse predicted.
+[2022/11/06-20:38:47] [i] ionwarn finished.
+[2022/11/06-20:38:47] [i] This node deploys bundle protocol version 7.
+[2022/11/06-20:38:47] [?] Can't find ION security database.
+[2022/11/06-20:38:47] [?] Warning: running without bundle security.
+[2022/11/06-20:38:47] [?] Can't find ION security database.
+[2022/11/06-20:38:47] [i] bpclock is running.
+[2022/11/06-20:38:47] [?] Can't find ION security database.
+[2022/11/06-20:38:47] [i] ltpclo is running.
+[2022/11/06-20:38:47] [?] Can't find ION security database.
+[2022/11/06-20:38:47] [?] Can't find ION security database.
+[2022/11/06-20:38:47] [i] Not configured for multicast; cpsd stopping.
+[2022/11/06-20:38:47] [?] Can't find ION security database.
+[2022/11/06-20:38:47] [i] ipnfw is running.
+[2022/11/06-20:38:47] [i] ltpcli is running.
+[2022/11/06-20:38:47] [?] Can't find ION security database.
+[2022/11/06-20:38:47] [i] bptransit is running.
+[2022/11/06-20:38:47] [?] Can't find ION security database.
+[2022/11/06-20:38:47] [i] ipnadminep is running.
+[2022/11/06-20:38:47] [?] Can't find ION security database.
+[2022/11/06-20:38:47] [i] ltpclo is running.
+[2022/11/06-20:38:48] [x] src from 1969/12/31-19:00:00 to 2022/11/06-20:38:48: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/11/06-20:38:48] [x] fwd from 1969/12/31-19:00:00 to 2022/11/06-20:38:48: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/11/06-20:38:48] [x] xmt from 1969/12/31-19:00:00 to 2022/11/06-20:38:48: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/11/06-20:38:48] [x] rcv from 1969/12/31-19:00:00 to 2022/11/06-20:38:48: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/11/06-20:38:48] [x] dlv from 1969/12/31-19:00:00 to 2022/11/06-20:38:48: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/11/06-20:38:48] [x] rfw from 1969/12/31-19:00:00 to 2022/11/06-20:38:48: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/11/06-20:38:48] [x] exp from 1969/12/31-19:00:00 to 2022/11/06-20:38:48: (0) 0 0 (1) 0 0 (2) 0 0 (+) 0 0
+[2022/11/06-20:38:48] [?] Can't find ION security database.
+[2022/11/06-20:38:48] [?] Can't find ION security database.
+[2022/11/06-20:38:48] [i] bpclm is running: ipn:22.0
+[2022/11/06-20:38:48] [?] Can't find ION security database.
+[2022/11/06-20:38:48] [i] bpclm is running: ipn:24.0
+[2022/11/06-20:39:01] [?] Can't find ION security database.
+[2022/11/06-20:40:24] [i] Span to engine 22 (max BER 0.000100, max xmit segment size 1400, max recv segment size 1392): xmit segment loss rate 0.673799, recv segment loss rate 0.671704, max timeouts 35.
