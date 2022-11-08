@@ -2,7 +2,7 @@
 #### Autonomous Observation Base using Delay Tolerant Networks for Unconnected Zones
 
 
-**Team Members:** Christian Jimenez (jimenezc2019@fau.edu), Ricardo Morales Solorzano (rmoralessolo2016@fau.edu), Dayton Taveras (dtaveras2019@fau.edu), Cesar Montes (cmontes2019@fau.edu), amari Morris (jamarimorris2020@fau.edu)
+**Team Members:** Christian Jimenez (jimenezc2019@fau.edu), Ricardo Morales Solorzano (rmoralessolo2016@fau.edu), Dayton Taveras (dtaveras2019@fau.edu), Cesar Montes (cmontes2019@fau.edu), Jamari Morris (jamarimorris2020@fau.edu)
 
 ## Project Summary 
 The main goal of this project is to monitor wildlife precisely and without human alteration. Our plan is to implement a secure device that will be constantly recording/getting information from multiple sensors (temperature, rain drop, UV sensor, humidity, among others). This information gathered will be sent from the transmitter node (wildlife node) to the receiver node (main node) through some communication layers such as Wifi/Ethernet and radio communication (LoRa Devices). When the information is received by the main node, this will be the one in charge of processing and displaying  the information in a more organized and  simple way in a web interface.
