@@ -1,0 +1,19 @@
+Temperature = 26.06 C
+Pressure = 951.95hPa
+Approx. Altitude = 523.30m
+Humidity = 52.47%
+
+Temperature = 26.15 C
+Pressure = 951.91hPa
+Approx. Altitude = 523.70m
+Humidity = 52.40%
+
+Temperature = 26.16 C
+Pressure = 951.93hPa
+Approx. Altitude = 523.48m
+Humidity = 52.24%
+
+Temperature = 26.18 C
+Pressure = 951.90hPa
+Approx. Altitude = 523.30m
+Humidity = 52.20%

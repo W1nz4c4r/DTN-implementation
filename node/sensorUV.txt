@@ -1,0 +1,14 @@
+UV Sensor
+
+UV Index reading: -0.03
+UV Index reading: -0.03
+UV Index reading: 0.04
+UV Index reading: 0.04
+UV Index reading: 1.89
+UV Index reading: 1.77
+UV Index reading: 1.77
+UV Index reading: 1.75
+UV Index reading: 1.73
+UV Index reading: 1.71
+UV Index reading: 1.65
+UV Index reading: 1.61

@@ -20,12 +20,19 @@ The main goal of this project is to monitor wildlife precisely and without human
   - Raspberry pi Zero W
   - LoRa Device (to be specified)
 
+
 ## Sofware versions
   - **OS** - Parrot 5.18.0
 
   - **pyion** - 4.1.0
 
   - **ION** - 4.1.0
+
+  - **Sensors used** 
+      - LM393 - Rain Drop Sensor 
+      - BMP380 - Humidity/Temp/Pressure Sensor 
+      - VEML6075 - UV Sensor 
+      - CJMCU-6814 - Particulate Sensor**
 
 ## Getting ION (Interplanetary Overlay Network) & pyion on linux
 
@@ -63,6 +70,14 @@ for extra information please reefer to [pyion page](https://pyion.readthedocs.io
 rlwrap is a 'readline wrapper', a small utility that uses the GNU Readline library to allow the editing of keyboard input for any command.
 **how to install:**
 ``` sudo apt install rlwrap```
+
+### instalation of python mongo dependency (pymongo)
+we will be sending some information to a mongo data base and to facilitate the DB utilization we are using the python libray pymongo. you can fing the repository [here](https://pypi.org/project/pymongo/)
+**how to install:**
+```pip3 install pymongo```
+
+### instalation of halo (spinners -art)
+```pip3 install halo```
 
 ## Before usage :
   - **Change Host files information**
