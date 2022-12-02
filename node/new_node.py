@@ -485,9 +485,11 @@ def set_Trasmiter(number):
     proxy = pyion.get_bp_proxy(number)
     proxy.bp_attach()
 
+    #this will help the program to know what to send
+    counter_send = 0 
 
     #openning endpoint and sending information
-    service = input(Style.BRIGHT + Fore.BLUE + '\n[!] Please enter the service number you want to set as trasminter: ')
+    service = input(Style.BRIGHT + Fore.BLUE + '\n[!] Please enter the service number you want to set as trasminter: \nSERVICE #:')
     #path : this variable will let the program where to go
     path = Check_Input(service)
     #   True for number
@@ -510,7 +512,7 @@ def set_Trasmiter(number):
             #   False for string
             if dst_node_check:
                 #the user have enter a number as a node 
-                print(Style.BRIGHT + Fore.BLUE + "[*] Node number setted up " )
+                print(Style.BRIGHT + Fore.BLUE + "[*] Receiver node number setted up " )
                 dest_service = input(Style.BRIGHT + Fore.BLUE + "\n[!] Please enter the SERVICE you wish to contact: \n\t SERVICE #: ")
                 dst_service_check = Check_Input(dest_service)
                 #   True for number
@@ -523,23 +525,121 @@ def set_Trasmiter(number):
                     print(Style.BRIGHT + Fore.BLUE +  ipn_connection)
                     conf_conn = input(Style.BRIGHT + Fore.BLUE + '[!] Do you wish to set up {} to as a trasmiter ? (Y/N) '.format(ipn))
                     if (conf_conn == 'Y' or conf_conn =='y'):
-
-                        #starting seding the information
-                        #openning UV sensor file information
-                        try:
-                            f = open(UV_name, "r")
-                            with proxy.bp_open(ipn) as eid:
-                                for line in f:
-                                    if line.strip() == "": #if the line is empty dont send it.
-                                        continue
-                                    else:
-                                        #this will be the send time
-                                        payload = line + "       " +str(datetime.datetime.now(pytz.timezone('US/Eastern')))
-                                        eid.bp_send(ipn_connection, payload)
-                        except : 
-                            print(Style.BRIGHT + Fore.RED + "[!] Could not open {}".format(UV_name_toClean))
-
+                        #READING HOST FLIE TO KNOW WHERE TO SEND DATA
+                        lines = [] # this will hold the lines of the host.rc to check neighboors
+                        dst_line = [] #this will hold all the contacts of the host file
+                        final_numbers = [] # this will hold ONLY the number of the contacts
+                        new_dst = [] # this holds only possible contacts
+                        with open("host-{}.rc".format(number),"r") as fp:
+                            line = fp.readlines()
+                            for row in line:
+                                word  = "a plan" #code will look for "a plan" in host for possible receivers
+                                if row.find(word) != -1:
+                                    lines.append(row)
+                        #after reading file and finding connections 
+                        for o in range(len(lines)): #traverse liner
+                            temp = lines[o].split("/")
+                            #print(temp)
+                            dst_line.append(temp[1])
+                        #get only the numbers of the "a plan" lines
+                        for u in range(len(dst_line)):
+                            host_file_numbers = dst_line[u].split('\n')
+                            final_numbers.append(int(host_file_numbers[0]))
+                        for y in range(len(final_numbers)):
+                            if final_numbers[y] != number :
+                                new_dst.append(final_numbers[y])
                         
+                        inHost = False # inHost will tell if the ipn_connection is on host.rc
+                        for t in range(len(new_dst)):
+                            if new_dst[t] == int(dest_node):
+                                inHost = True
+                                continue
+                            else:
+                                inHost = False
+                                
+                        if inHost:
+                            #if dest in host send file
+                            try:
+                                for x in range(4):
+                                    if x == 0:
+                                        #sending ipn information
+                                        spinner = Halo(text= Style.BRIGHT + Fore.BLUE +"[-] Sending destination IPN",  spinner = "dots", placement = "right")
+                                        spinner.start()
+                                        with proxy.bp_open(ipn) as eid:
+                                            #send the ipn destination
+                                            eid.bp_send(ipn_connection, ipn_connection)
+                                        spinner.succeed()
+                                        spinner.stop()
+                                    elif x == 1:
+                                        #Sending uv file
+                                        spinner = Halo(text= Style.BRIGHT + Fore.BLUE +"[-] Sending Sensor UV file",  spinner = "dots", placement = "right")
+                                        spinner.start()
+                                        with proxy.bp_open(ipn) as eid:
+                                            eid.bp_send_file(ipn_connection, UV_name )
+                                        spinner.succeed()
+                                        spinner.stop()
+                                    elif x == 2:
+                                        #sendig rain drop fike 
+                                        spinner = Halo(text= Style.BRIGHT + Fore.BLUE +"[-] Sending rain drop file",  spinner = "dots", placement = "right")
+                                        spinner.start()
+                                        with proxy.bp_open(ipn) as eid:
+                                            eid.bp_send_file(ipn_connection, rain_name)
+                                        spinner.succeed()
+                                        spinner.stop()
+                                    elif x == 3:
+                                        #sending HTP file
+                                        spinner = Halo(text= Style.BRIGHT + Fore.BLUE +"[-] Sending HTP file",  spinner = "dots", placement = "right")
+                                        spinner.start()
+                                        with proxy.bp_open(ipn) as eid:
+                                            eid.bp_send_file(ipn_connection, name_HTP)
+                                        spinner.succeed()
+                                        spinner.stop()
+                                    
+                            except : 
+                                print(Style.BRIGHT + Fore.RED + "[!] Fatal ERROR. Code 652")
+                        elif inHost == False:
+                            #if dest is not in host file 
+                            #print(new_dst)
+                            new_dest_connection = "ipn:{}.{}".format(new_dst[0],dest_service)
+                            try:
+                                for x in range(4):
+                                    if x == 0:
+                                        #sending ipn information
+                                        spinner = Halo(text= Style.BRIGHT + Fore.BLUE +"[-] Sending destination IPN",  spinner = "dots", placement = "right")
+                                        spinner.start()
+                                        with proxy.bp_open(ipn) as eid:
+                                            #send the ipn destination
+                                            eid.bp_send(new_dest_connection, ipn_connection)
+                                        spinner.succeed()
+                                        spinner.stop()
+                                    elif x == 1:
+                                        #Sending uv file
+                                        spinner = Halo(text= Style.BRIGHT + Fore.BLUE +"[-] Sending Sensor UV file",  spinner = "dots", placement = "right")
+                                        spinner.start()
+                                        with proxy.bp_open(ipn) as eid:
+                                            eid.bp_send_file(new_dest_connection, UV_name )
+                                        spinner.succeed()
+                                        spinner.stop()
+                                    elif x == 2:
+                                        #sendig rain drop fike 
+                                        spinner = Halo(text= Style.BRIGHT + Fore.BLUE +"[-] Sending rain drop file",  spinner = "dots", placement = "right")
+                                        spinner.start()
+                                        with proxy.bp_open(ipn) as eid:
+                                            eid.bp_send_file(new_dest_connection, rain_name)
+                                        spinner.succeed()
+                                        spinner.stop()
+                                    elif x == 3:
+                                        #sending HTP file
+                                        spinner = Halo(text= Style.BRIGHT + Fore.BLUE +"[-] Sending HTP file",  spinner = "dots", placement = "right")
+                                        spinner.start()
+                                        with proxy.bp_open(ipn) as eid:
+                                            eid.bp_send_file(new_dest_connection, name_HTP)
+                                        spinner.succeed()
+                                        spinner.stop()
+                                    
+                            except : 
+                                print(Style.BRIGHT + Fore.RED + "[!] Fatal ERROR. Code 652")
+  
                     elif (conf_conn == 'N' or conf_conn =='n'):
                         set_Trasmiter(number)
 
@@ -615,7 +715,6 @@ def Activate_trasmiter_service(node):
             sys.exit(1)
 
 
-
 # will set the node as a receiver and will receive info form the specified node
 def set_Receiver(number):
     #recv_number --> is the service number of the receiver 
@@ -633,34 +732,112 @@ def set_Receiver(number):
         print(Style.BRIGHT + Fore.GREEN +"[+] Checking Specified service")
         #Creating the IPN number for the machine 
         ipn = "ipn:{}.{}".format(number, recv_number)
+        
+        counter_lines = 0 #count tells what files are being received 
+        #resend will be a helper function that will tell the program
+        # if it is necesarry to RESEND the data to the final node
+        # this part will be intendend for the mule nodes.
+        resend_data =  False #compare received ipn with host ipn 
+
         #checking if node is active 
         node_recv_up = pyion.admin.bp_endpoint_exists(ipn)
         #True if service is up and running
         if node_recv_up:
             print(Style.BRIGHT + Fore.GREEN +'[+] The service is up and running!!!')
 
-
+            resend_ipn_connection = ""
             #set the receiver ready to receive information
             conf_conn = input(Style.BRIGHT + Fore.GREEN +'[!] Do you wish to set up {} to as a receiver ? (Y/N) '.format(ipn))
             if (conf_conn == 'Y' or conf_conn =='y'):
                 # Listen to 'ipn:#.%' for incoming data
                 with proxy.bp_open(ipn) as eid:
-                    #opening the file in which data is going to be record
-                    write_UV_file = open(UV_name,"w")
+                ###spinner = Halo(text= Style.BRIGHT + Fore.WHITE +"[-] receiving information...",  spinner = "dots", placement = "right")
+                ###spinner.start()
                     while eid.is_open:
                         try:
-                            # This is a blocking call.
-                            #NYC time
-                            #print(Style.BRIGHT + Fore.GREEN +"=======================START===================== \n")
-                            #print(Style.BRIGHT + Fore.GREEN +'[+] DATE ' + str(datetime.datetime.now(pytz.timezone("US/Eastern"))) + " --> Received:", eid.bp_receive())
-                            #print(Style.BRIGHT + Fore.GREEN +"=====================END=========================\n")
-
-                            #receiving the file and writing into the respective place
-                            write_UV_file.write(str(datetime.datetime.now(pytz.timezone("US/Eastern"))) + str(eid.bp_receive()))
-
+                            if counter_lines == 0 : #RECEIVE IPN FORM SENDER
+                                spinner = Halo(text= Style.BRIGHT + Fore.GREEN +"[-] receiving destination IPN",  spinner = "dots", placement = "right")
+                                spinner.start()
+                                ipn_final_destination = eid.bp_receive()
+                                ipn_final_destination = str(ipn_final_destination)
+                                ipn_final_destination = ipn_final_destination.split(':') # ipn:23.54 --> getting the number part 
+                                ipn_final_destination = ipn_final_destination[1].split('.') # getting node number
+                                ipn_final_destination = ipn_final_destination[0]
+                                ipn_final_destination = int(ipn_final_destination)
+                                #print('Final destination is {} \nnumber is {}'.format(ipn_final_destination, number))
+                                if ipn_final_destination == number:
+                                    #if final destination ipn and host the same set false
+                                    #DO NOT resend
+                                    resend_data = False
+                                else :
+                                    #if destination and host NOT the same set True
+                                    #RESEND THE DATA 
+                                    resend_data = True
+                                    resend_ipn_connection = ipn_final_destination
+                                counter_lines = counter_lines + 1 
+                                spinner.succeed()
+                                spinner.stop()
+                            elif counter_lines == 1 : #RECEIVES SENSOR UV FILE
+                                spinner = Halo(text= Style.BRIGHT + Fore.GREEN +"[-] receiving Sensor UV file",  spinner = "dots", placement = "right")
+                                spinner.start()
+                                #this is a blocking call
+                                sensor_file = eid.bp_receive()
+                                sensor_file = str(sensor_file).split('\\n')
+                                sensor_file = sensor_file[2:-1]
+                                counter_lines = counter_lines + 1
+                                #if the file hasnt been erased append the new information to the file 
+                                f_uv= open("sensorUV.txt", "a")
+                                for x in range(len(sensor_file)):
+                                    f_uv.write('{}\n'.format(sensor_file[x]))
+                                f_uv.close()
+                                spinner.succeed()
+                                spinner.stop()
+                            elif counter_lines == 2: # RECEIVES RAIN DROP FILE 
+                                spinner = Halo(text= Style.BRIGHT + Fore.GREEN +"[-] receiving rain drop file",  spinner = "dots", placement = "right")
+                                spinner.start()
+                                #this is a blocking call
+                                rain_file = eid.bp_receive()
+                                rain_file = str(rain_file).split('\\n')
+                                rain_file = rain_file[2:]
+                                counter_lines = counter_lines + 1
+                                #if the file hasnt been erased append the new information to the file 
+                                f_rain = open("rainDrop.txt", "a")
+                                for i in range(len(rain_file)):
+                                    f_rain.write("{}\n".format(rain_file[i]))
+                                f_rain.close()
+                                spinner.succeed()
+                                spinner.stop()
+                            elif counter_lines == 3: #RECEIVES HTP (Humidity, Temperature, Preassure) FILE 4
+                                spinner = Halo(text= Style.BRIGHT + Fore.GREEN +"[-] receiving HTP file",  spinner = "dots", placement = "right")
+                                spinner.start()
+                                htp_file = eid.bp_receive()
+                                htp_file = str(htp_file).split('\\n')
+                                htp_fix = htp_file[0].split("'")
+                                htp_file[0] = htp_fix[1]
+                                htp_file = htp_file[:-1]
+                                counter_lines = counter_lines + 1
+                                #if the file hasnt been erased append the new information to the file 
+                                f_htp = open("HTP.txt", "a")
+                                for u in range(len(htp_file)):
+                                    f_htp.write("{}\n".format(htp_file[u]))
+                                f_htp.close()
+                                spinner.succeed()
+                                spinner.stop()
+                            elif counter_lines == 4 : #no more files, extra is ignored
+                                # if count 4 it will break and leave the while loop
+                                break
                         except InterruptedError:
                             # User has triggered interruption with Ctrl+C
                             break
+                if resend_data == True:
+                    #send data to the specified node
+                    print(Style.BRIGHT + Fore.RED +"[*] Preparing to transfer data...")
+                    new_ipn = "ipn:{}.{}".format(resend_ipn_connection,1)
+                    transfer_data(new_ipn, ipn, number)
+                elif resend_data == False:
+                    #do not send data. information has reached destination
+                    print("All data have been received ")
+
             elif( conf_conn == 'N' or conf_conn =='n'):
                 set_Receiver(number)
 
@@ -698,6 +875,60 @@ def set_Receiver(number):
         else:
             print (Style.BRIGHT + Fore.GREEN +'[*]Please enter a valid service NUMBER \n[*] to check service numbers active use : -EPS \n[*] To exit the app please enter : -Q')
             set_Receiver(number)
+
+#helper to resend data if it not host
+def transfer_data(resend_ipn_connection, hostIPN, number):
+    #print(resend_ipn_connection)
+    #print(hostIPN)
+     #create a proxy to node # and attach ION
+    proxy = pyion.get_bp_proxy(number)
+    proxy.bp_attach()
+    try:
+        for x in range(4):
+            if x == 0:
+                #sending ipn information
+                spinner = Halo(text= Style.BRIGHT + Fore.BLUE +"[-] Sending destination IPN",  spinner = "dots", placement = "right")
+                spinner.start()
+                with proxy.bp_open(hostIPN) as eid:
+                    #send the ipn destination
+                    eid.bp_send(resend_ipn_connection, resend_ipn_connection)
+                spinner.succeed()
+                spinner.stop()
+            elif x == 1:
+                #Sending uv file
+                spinner = Halo(text= Style.BRIGHT + Fore.BLUE +"[-] Sending Sensor UV file",  spinner = "dots", placement = "right")
+                spinner.start()
+                with proxy.bp_open(hostIPN) as eid:
+                    eid.bp_send_file(resend_ipn_connection, UV_name )
+                f  = open(UV_name, "w")
+                f.close()
+                spinner.succeed()
+                spinner.stop()
+            elif x == 2:
+                #sendig rain drop fike 
+                spinner = Halo(text= Style.BRIGHT + Fore.BLUE +"[-] Sending rain drop file",  spinner = "dots", placement = "right")
+                spinner.start()
+                with proxy.bp_open(hostIPN) as eid:
+                    eid.bp_send_file(resend_ipn_connection, rain_name)
+                f  = open(rain_name, "w")
+                f.close()
+                spinner.succeed()
+                spinner.stop()
+            elif x == 3:
+                #sending HTP file
+                spinner = Halo(text= Style.BRIGHT + Fore.BLUE +"[-] Sending HTP file",  spinner = "dots", placement = "right")
+                spinner.start()
+                with proxy.bp_open(hostIPN) as eid:
+                    eid.bp_send_file(resend_ipn_connection, name_HTP)
+                f  = open(name_HTP, "w")
+                f.close()
+                spinner.succeed()
+                spinner.stop()
+            
+    except : 
+        print(Style.BRIGHT + Fore.RED + "[!] Fatal ERROR. Code 652")
+   
+
 
 # Helper function to activate a nwe service for the receiver
 # params:
